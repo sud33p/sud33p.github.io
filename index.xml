@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sudeep&#39;s Blog</title>
-    <link>/index.xml</link>
+    <link>https://blog.sudeepshakya.com/index.xml</link>
     <description>Recent content on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Sep 2016 01:02:07 +1000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.sudeepshakya.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sitecore and Symlinks (Symbolic Links)</title>
-      <link>/2016/09/sitecore-and-symlinks-symbolic-links/</link>
+      <link>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</link>
       <pubDate>Sat, 03 Sep 2016 01:02:07 +1000</pubDate>
       
-      <guid>/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
+      <guid>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
       <description>
 
 &lt;p&gt;You must be wondering, what&amp;rsquo;s the relation here? There isn&amp;rsquo;t really, yet there could very well be one, if you want&amp;hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&amp;rsquo;t think there are more than 100 ways). That&amp;rsquo;s still a lot.&lt;/p&gt;
@@ -26,7 +26,7 @@
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;/images/sitecore-symlinks-diagram-1.png&#34; /&gt;
+        &lt;img src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -89,7 +89,7 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;/images/sitecore-symlinks-diagram-2.png&#34; /&gt;
+        &lt;img src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -104,7 +104,7 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;/images/sitecore-symlinks-diagram-3.png&#34; /&gt;
+        &lt;img src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png&#34; /&gt;
     
     
     &lt;figcaption&gt;
