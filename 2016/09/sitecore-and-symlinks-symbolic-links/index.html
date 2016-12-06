@@ -235,6 +235,7 @@ ga('send', 'pageview');
   
 
 
+   <span>&middot; 4 minute read</span>
 </div>
 
 </div>
@@ -250,17 +251,27 @@ ga('send', 'pageview');
 <p>Even though this project followed the technique of separating the sitecore website files from the code project, the sitecore website folder was still kept inside the solution folder, the source controlled area. Gitignores were used to prevent the folder content from getting tracked. This meant that the placement of the other two folders that are part of the sitecore installation (Data and Databases), were left to the dev&rsquo;s discretion. Below is an example of such a structure.</p>
 
 
-<figure >
+
+ 
+  
+  
+  
+  
     
-        <img src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png" />
-    
-    
-    <figcaption>
-        <h4>Sitecore install folder on left, Repo on the right</h4>
-        
-    </figcaption>
-    
-</figure>
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png" title="Sitecore install folder on left, Repo on the right" data-fancybox-group="group:symlinks">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png"  alt="Sitecore install folder on left, Repo on the right">
+  
+    </a>
+  
+   
+    <span class="caption">Sitecore install folder on left, Repo on the right</span>
+  
+</div>
 
 
 <p>The sitecore install folder is on the left, which normally contains of &lsquo;Data, Databases and Website&rsquo; folders. The &lsquo;Website&rsquo; folder has been moved to the right here. This isn&rsquo;t so bad per se, sitting at a relative location to the solution is a benefit. But if you are working on multiple projects or someone new joins the team, this can get confusing. I was not a big fan. Can we for once get best of both worlds?</p>
@@ -313,33 +324,54 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 <p>We should now have a symlink named &lsquo;Website&rsquo; created in the sitecore install folder which appears as a folder but is really pointing to the &lsquo;Website&rsquo; folder in the repo. You can identify by the little shortcut icon on it.</p>
 
 
-<figure >
+
+ 
+  
+  
+  
+  
     
-        <img src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png" />
-    
-    
-    <figcaption>
-        <h4>Directory junction created</h4>
-        
-    </figcaption>
-    
-</figure>
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png" title="Directory junction created" data-fancybox-group="group:symlinks">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png"  alt="Directory junction created">
+  
+    </a>
+  
+   
+    <span class="caption">Directory junction created</span>
+  
+</div>
 
 
-<p>Go ahead and open it. You should see all of the same website content listed underneath.
+<p>Go ahead and open it. You should see all of the same website content listed underneath.</p>
 
-<figure >
+
+
+ 
+  
+  
+  
+  
     
-        <img src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png" />
-    
-    
-    <figcaption>
-        <h4>Sitecore install folder on left, Repo on the right</h4>
-        
-    </figcaption>
-    
-</figure>
-</p>
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png" title="Sitecore install folder on left, Repo on the right" data-fancybox-group="group:symlinks">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png"  alt="Sitecore install folder on left, Repo on the right">
+  
+    </a>
+  
+   
+    <span class="caption">Sitecore install folder on left, Repo on the right</span>
+  
+</div>
+
 
 <p>As a quick test, create a test file underneath either of the folder. You will see it appear immediately under the other.</p>
 
