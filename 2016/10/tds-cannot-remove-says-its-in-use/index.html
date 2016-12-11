@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.17">
-    <title>Sitecore and Symlinks (Symbolic Links)</title>
+    <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
     <meta name="author" content="Sudeep Shakya">
     <meta name="keywords" content=", web development, sitecore, .net, technology">
 
@@ -24,15 +24,18 @@
     
 
     
-    <meta name="description" content="You must be wondering, what&rsquo;s the relation here? There isn&rsquo;t really, yet there could very well be one, if you want&hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&rsquo;t think there are more than 100 ways).">
-    <meta property="og:description" content="You must be wondering, what&rsquo;s the relation here? There isn&rsquo;t really, yet there could very well be one, if you want&hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&rsquo;t think there are more than 100 ways).">
+    <meta name="description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
+An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
+    <meta property="og:description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
+An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Sitecore and Symlinks (Symbolic Links)">
-    <meta property="og:url" content="/2016/09/sitecore-and-symlinks-symbolic-links/">
+    <meta property="og:title" content="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
+    <meta property="og:url" content="/2016/10/tds-cannot-remove-says-its-in-use/">
     <meta property="og:site_name" content="Sudeep&#39;s Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Sudeep&#39;s Blog">
-    <meta name="twitter:description" content="You must be wondering, what&rsquo;s the relation here? There isn&rsquo;t really, yet there could very well be one, if you want&hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&rsquo;t think there are more than 100 ways).">
+    <meta name="twitter:description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
+An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
     
       <meta name="twitter:creator" content="@sudeep77">
     
@@ -216,13 +219,13 @@ ga('send', 'pageview');
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Sitecore and Symlinks (Symbolic Links)
+      TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!
     </h1>
   
   <div class="post-meta">
-  <time itemprop="datePublished" datetime="2016-09-03T01:02:07&#43;10:00">
+  <time itemprop="datePublished" datetime="2016-10-20T20:00:00&#43;10:00">
     
-  September 3, 2016
+  October 20, 2016
 
   </time>
   
@@ -230,12 +233,14 @@ ga('send', 'pageview');
   
     <span>in</span>
     
-      <a class="category-link" href="https://blog.sudeepshakya.com/categories/sitecore">Sitecore</a>
+      <a class="category-link" href="https://blog.sudeepshakya.com/categories/sitecore">Sitecore</a>, 
+    
+      <a class="category-link" href="https://blog.sudeepshakya.com/categories/team-development-for-sitecore">Team Development for Sitecore</a>
     
   
 
 
-   <span>&middot; 4 minute read</span>
+   <span>&middot; 2 minute read</span>
 </div>
 
 </div>
@@ -244,84 +249,71 @@ ga('send', 'pageview');
             <div class="main-content-wrap">
               
 
-<p>You must be wondering, what&rsquo;s the relation here? There isn&rsquo;t really, yet there could very well be one, if you want&hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&rsquo;t think there are more than 100 ways). That&rsquo;s still a lot.</p>
+<p>Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is <code>Missing in Project</code> and you will choose to <code>Remove from Sitecore</code> but the error window says nah, can&rsquo;t do it.</p>
 
-<p>Ok, back to the topic. Recently, one of the projects that I worked on had a slightly different approach of structuring projects/folders in the solution, mainly the Website publish folder where the web project publishes into. One of the very popular ways to arrange your sitecore project is to keep your sitecore website files separate from the codebase. This approach has a lot of benefits as opposed to developing directly on top of your IIS website folder. If you are not familiar with this development technique, I suggest you read Sean Kearney&rsquo;s post <a href="http://seankearney.com/post/Visual-Studio-Projects-and-Sitecore" target="_blank">here</a>.</p>
+<pre><code class="language-NONE">An exception occurred while updating the sitecore item /sitecore/item/path/name.
 
-<p>Even though this project followed the technique of separating the sitecore website files from the code project, the sitecore website folder was still kept inside the solution folder, the source controlled area. Gitignores were used to prevent the folder content from getting tracked. This meant that the placement of the other two folders that are part of the sitecore installation (Data and Databases), were left to the dev&rsquo;s discretion. Below is an example of such a structure.</p>
+The &quot;name&quot; template is in use.
 
+Delete all the items that are based on this template.
 
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png" title="Sitecore install folder on left, Repo on the right" data-fancybox-group="group:symlinks">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png"  alt="Sitecore install folder on left, Repo on the right">
-  
-    </a>
-  
-   
-    <span class="caption">Sitecore install folder on left, Repo on the right</span>
-  
-</div>
-
-
-<p>The sitecore install folder is on the left, which normally contains of &lsquo;Data, Databases and Website&rsquo; folders. The &lsquo;Website&rsquo; folder has been moved to the right here. This isn&rsquo;t so bad per se, sitting at a relative location to the solution is a benefit. But if you are working on multiple projects or someone new joins the team, this can get confusing. I was not a big fan. Can we for once get best of both worlds?</p>
-
-<h3 id="symlinks-to-the-rescue">Symlinks to the rescue</h3>
-
-<p>Using Symlinks you can create a junction link on the sitecore install folder, pointing to the &lsquo;Website&rsquo; folder on the Repo. And it will make it look like the &lsquo;Website&rsquo; folder exists within the install folder with all its contents, even though it is just a reference to the actual &lsquo;Website&rsquo; folder within the repo. Think of it as an advanced shortcut, similar to the Windows shortcut link (.lnk) but with greater power.</p>
-
-<blockquote>
-<p>What are Symlinks anyway?
-Symlinks or Symbolic links, are basically advanced shortcuts. You can create symbolic links to individual files or folders, and then these will appear like they are stored in the folder with the symbolic link even though the symbolic link only points to their real location. <a href="http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/" target="_blank">Read more here</a></p>
-</blockquote>
-
-<h3 id="the-command">The command</h3>
-
-<p><strong>Syntax:</strong>
-<pre><code class="bash">
-    <strong>MKLINK [[/D] | [/H] | [/J]] Link Target</strong>
-        /D          Creates a directory symbolic link.  Default is a file symbolic link.
-        /H          Creates a hard link instead of a symbolic link.
-        /J          Creates a Directory Junction.
-        Link        Specifies the new symbolic link name.
-        Target      Specifies the path (relative or absolute) that the new link refers to.<br />
-</code></pre></p>
-
-<p>For our purpose, we need to create a directory junction <code>(/J)</code> to link to the Website folder. So lets go ahead and do that:</p>
-
-<ol>
-<li>Open command prompt (in Admin mode)</li>
-
-<li><p>Enter the command <code>mklink /J Link Target</code>. In our case:</p>
-
-<pre><code>D:\Dev\Sites\ClientA&gt;mklink /J Website D:\Dev\Repos\ClientA\src\Website
+Please see the output window for more details.
 </code></pre>
 
-<p>If successful, we will see the following output:</p>
 
-<pre><code class="language-default">Junction created for Website &lt;&lt;===&gt;&gt; D:\Dev\Repos\ClientA\src\Website
-</code></pre></li>
-</ol>
 
-<div class="alert info no-icon ">
-  <p>
-`MKLINK` is a built-in command line symlink tool in Windows Vista and above. If you are more of a GUI person, <a href="http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html" target="_blank">Link Shell Extension</a> is an excellent free tool for you. It also supports Windows XP.
-</p>
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png" title="TDS says the template is in use" data-fancybox-group="group:tds">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png"  alt="TDS says the template is in use">
+  
+    </a>
+  
+   
+    <span class="caption">TDS says the template is in use</span>
+  
 </div>
 
-<h3 id="result">Result</h3>
 
-<p>We should now have a symlink named &lsquo;Website&rsquo; created in the sitecore install folder which appears as a folder but is really pointing to the &lsquo;Website&rsquo; folder in the repo. You can identify by the little shortcut icon on it.</p>
+<p>First of all, the word &ldquo;occured&rdquo; in the screenshot is incorrect, says <a href="https://en.wiktionary.org/wiki/occured" target="_blank">Wiktionary</a>. But nothing worse than getting this error when you are trying to do a sync on a long list of new/deleted/updated items/templates/whatever, presumably after isolating yourself on your solo <strong>&ldquo;feature&rdquo;</strong> branch for a while.. Actually, the worst one has to be the one where TDS does not have a clue what to blame and just throws an exception. And then you have to scroll down the sync window to find the broken items and manually remove them.</p>
+
+<p>This one is equally bad because there isn&rsquo;t any item that&rsquo;s using the named template. You know there isn&rsquo;t, but TDS says otherwise. So you have to investigate. &ldquo;Links&rdquo; button on the &ldquo;Navigate&rdquo; ribbon to the rescue.</p>
+
+<p><em>Content Editor &gt; Navigate (ribbon) &gt; Links</em>
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png" title="Checking the Links referral" data-fancybox-group="group:tds">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png"  alt="Checking the Links referral">
+  
+    </a>
+  
+   
+    <span class="caption">Checking the Links referral</span>
+  
+</div>
+</p>
+
+<p>Guess what? No content item is using it. The Links window shows a rendering, but it shouldn&rsquo;t as it was updated to use something else, I swear. Let&rsquo;s check further.</p>
 
 
 
@@ -335,19 +327,17 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 <div class="figure " >
   
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png" title="Directory junction created" data-fancybox-group="group:symlinks">
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png" title="Checking the rendering datasource template" data-fancybox-group="group:tds">
   
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png"  alt="Directory junction created">
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png"  alt="Checking the rendering datasource template">
   
     </a>
   
    
-    <span class="caption">Directory junction created</span>
+    <span class="caption">Checking the rendering datasource template</span>
   
 </div>
 
-
-<p>Go ahead and open it. You should see all of the same website content listed underneath.</p>
 
 
 
@@ -361,27 +351,79 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 <div class="figure " >
   
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png" title="Sitecore install folder on left, Repo on the right" data-fancybox-group="group:symlinks">
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png" title="Checking the branch item template" data-fancybox-group="group:tds">
   
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png"  alt="Sitecore install folder on left, Repo on the right">
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png"  alt="Checking the branch item template">
   
     </a>
   
    
-    <span class="caption">Sitecore install folder on left, Repo on the right</span>
+    <span class="caption">Checking the branch item template</span>
   
 </div>
 
 
-<p>As a quick test, create a test file underneath either of the folder. You will see it appear immediately under the other.</p>
+<p>So further investigation proves that the listed rendering is not using the template at all. What now?</p>
 
-<p>All done. Now you can use this symlink reference as a real &lsquo;Website&rsquo; folder for anything you want, be it for IIS site path, TDS project or grunt/gulp tasks.</p>
+<h3 id="solution">Solution</h3>
 
-<div class="alert warning no-icon ">
-  <p>
-One thing to remember is, even though these symlinks are a reference to the original item, they do not inherit permissions. So if you are going to use it for say, an IIS site, make sure to set appropriate permissions on the symlink as well.
-</p>
+<p>It is now obvious that the Links window is not reporting correctly. So definitely a problem with the Links database. Let&rsquo;s go ahead an rebuild it, the <code>master</code> database at a minimum as that&rsquo;s our concern here.</p>
+
+<p><em>Control Panel &gt; (Database) &gt; Rebuild link databases</em>
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png" title="Rebuild Link Databases" data-fancybox-group="group:tds">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png"  alt="Rebuild Link Databases">
+  
+    </a>
+  
+   
+    <span class="caption">Rebuild Link Databases</span>
+  
 </div>
+</p>
+
+<p>Now check back on the Links window, there is nothing referring to our template now.
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png" title="Checking the Links referral again" data-fancybox-group="group:tds">
+  
+    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png"  alt="Checking the Links referral again">
+  
+    </a>
+  
+   
+    <span class="caption">Checking the Links referral again</span>
+  
+</div>
+</p>
+
+<p>Go ahead and re-sync TDS. It should be able to remove the template now.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>So looks like TDS goes through the same sitecore middle layer or uses it for its operations. So next time, if you get this error and you are pretty sure the template is not in use, just go ahead and try your luck by rebuilding the links database.</p>
 
               
             </div>
@@ -395,7 +437,9 @@ One thing to remember is, even though these symlinks are a reference to the orig
                   
   <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/sitecore/">Sitecore</a>
 
-  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/development/">Development</a>
+  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/tds/">TDS</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/error/">Error</a>
 
                 </div>
               
@@ -405,7 +449,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -413,7 +457,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--disabled">
+          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/" data-tooltip="Sitecore and Symlinks (Symbolic Links)">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -428,17 +472,17 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -482,7 +526,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -490,7 +534,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--disabled">
+          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/" data-tooltip="Sitecore and Symlinks (Symbolic Links)">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -505,17 +549,17 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -541,17 +585,17 @@ One thing to remember is, even though these symlinks are a reference to the orig
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f09%2fsitecore-and-symlinks-symbolic-links%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -693,9 +737,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.sudeepshakya.com\/2016\/09\/sitecore-and-symlinks-symbolic-links\/';
+          this.page.url = 'https:\/\/blog.sudeepshakya.com\/2016\/10\/tds-cannot-remove-says-its-in-use\/';
           
-            this.page.identifier = '\/2016\/09\/sitecore-and-symlinks-symbolic-links\/'
+            this.page.identifier = '\/2016\/10\/tds-cannot-remove-says-its-in-use\/'
           
         };
         (function() {

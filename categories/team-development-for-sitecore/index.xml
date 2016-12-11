@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sudeep&#39;s Blog</title>
+    <link>https://blog.sudeepshakya.com/categories/team-development-for-sitecore/index.xml</link>
+    <description>Recent content on Sudeep&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://blog.sudeepshakya.com/categories/team-development-for-sitecore/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
+      <link>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</link>
+      <pubDate>Thu, 20 Oct 2016 20:00:00 +1000</pubDate>
+      
+      <guid>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</guid>
+      <description>
+
+&lt;p&gt;Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is &lt;code&gt;Missing in Project&lt;/code&gt; and you will choose to &lt;code&gt;Remove from Sitecore&lt;/code&gt; but the error window says nah, can&amp;rsquo;t do it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-NONE&#34;&gt;An exception occurred while updating the sitecore item /sitecore/item/path/name.
+
+The &amp;quot;name&amp;quot; template is in use.
+
+Delete all the items that are based on this template.
+
+Please see the output window for more details.
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34; title=&#34;TDS says the template is in use&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34;  alt=&#34;TDS says the template is in use&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;TDS says the template is in use&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;First of all, the word &amp;ldquo;occured&amp;rdquo; in the screenshot is incorrect, says &lt;a href=&#34;https://en.wiktionary.org/wiki/occured&#34; target=&#34;_blank&#34;&gt;Wiktionary&lt;/a&gt;. But nothing worse than getting this error when you are trying to do a sync on a long list of new/deleted/updated items/templates/whatever, presumably after isolating yourself on your solo &lt;strong&gt;&amp;ldquo;feature&amp;rdquo;&lt;/strong&gt; branch for a while.. Actually, the worst one has to be the one where TDS does not have a clue what to blame and just throws an exception. And then you have to scroll down the sync window to find the broken items and manually remove them.&lt;/p&gt;
+
+&lt;p&gt;This one is equally bad because there isn&amp;rsquo;t any item that&amp;rsquo;s using the named template. You know there isn&amp;rsquo;t, but TDS says otherwise. So you have to investigate. &amp;ldquo;Links&amp;rdquo; button on the &amp;ldquo;Navigate&amp;rdquo; ribbon to the rescue.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Content Editor &amp;gt; Navigate (ribbon) &amp;gt; Links&lt;/em&gt;
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34; title=&#34;Checking the Links referral&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34;  alt=&#34;Checking the Links referral&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Checking the Links referral&lt;/span&gt;
+  
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Guess what? No content item is using it. The Links window shows a rendering, but it shouldn&amp;rsquo;t as it was updated to use something else, I swear. Let&amp;rsquo;s check further.&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34; title=&#34;Checking the rendering datasource template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34;  alt=&#34;Checking the rendering datasource template&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Checking the rendering datasource template&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34; title=&#34;Checking the branch item template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34;  alt=&#34;Checking the branch item template&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Checking the branch item template&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;So further investigation proves that the listed rendering is not using the template at all. What now?&lt;/p&gt;
+
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+
+&lt;p&gt;It is now obvious that the Links window is not reporting correctly. So definitely a problem with the Links database. Let&amp;rsquo;s go ahead an rebuild it, the &lt;code&gt;master&lt;/code&gt; database at a minimum as that&amp;rsquo;s our concern here.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Control Panel &amp;gt; (Database) &amp;gt; Rebuild link databases&lt;/em&gt;
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34;  alt=&#34;Rebuild Link Databases&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Rebuild Link Databases&lt;/span&gt;
+  
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now check back on the Links window, there is nothing referring to our template now.
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34; title=&#34;Checking the Links referral again&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34;  alt=&#34;Checking the Links referral again&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Checking the Links referral again&lt;/span&gt;
+  
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Go ahead and re-sync TDS. It should be able to remove the template now.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;So looks like TDS goes through the same sitecore middle layer or uses it for its operations. So next time, if you get this error and you are pretty sure the template is not in use, just go ahead and try your luck by rebuilding the links database.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
