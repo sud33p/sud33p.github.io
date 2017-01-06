@@ -281,26 +281,26 @@ ga('send', 'pageview');
 <p>Using Symlinks you can create a junction link on the sitecore install folder, pointing to the &lsquo;Website&rsquo; folder on the Repo. And it will make it look like the &lsquo;Website&rsquo; folder exists within the install folder with all its contents, even though it is just a reference to the actual &lsquo;Website&rsquo; folder within the repo. Think of it as an advanced shortcut, similar to the Windows shortcut link (.lnk) but with greater power.</p>
 
 <blockquote>
-<p>What are Symlinks anyway?
+<p>What are Symlinks anyway?<br />
 Symlinks or Symbolic links, are basically advanced shortcuts. You can create symbolic links to individual files or folders, and then these will appear like they are stored in the folder with the symbolic link even though the symbolic link only points to their real location. <a href="http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/" target="_blank">Read more here</a></p>
 </blockquote>
 
 <h3 id="the-command">The command</h3>
 
-<p><strong>Syntax:</strong>
-<pre><code class="bash">
-    <strong>MKLINK [[/D] | [/H] | [/J]] Link Target</strong>
-        /D          Creates a directory symbolic link.  Default is a file symbolic link.
-        /H          Creates a hard link instead of a symbolic link.
-        /J          Creates a Directory Junction.
-        Link        Specifies the new symbolic link name.
+<p><strong>Syntax:</strong><br />
+<pre><code class="bash"><br />
+    <strong>MKLINK [[/D] | [/H] | [/J]] Link Target</strong><br />
+        /D          Creates a directory symbolic link.  Default is a file symbolic link.<br />
+        /H          Creates a hard link instead of a symbolic link.<br />
+        /J          Creates a Directory Junction.<br />
+        Link        Specifies the new symbolic link name.<br />
         Target      Specifies the path (relative or absolute) that the new link refers to.<br />
 </code></pre></p>
 
 <p>For our purpose, we need to create a directory junction <code>(/J)</code> to link to the Website folder. So lets go ahead and do that:</p>
 
 <ol>
-<li>Open command prompt (in Admin mode)</li>
+<li>Open command prompt (in Admin mode)<br /></li>
 
 <li><p>Enter the command <code>mklink /J Link Target</code>. In our case:</p>
 
@@ -471,7 +471,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2016 Sudeep Shakya. All Rights Reserved
+    &copy; 2017 Sudeep Shakya. All Rights Reserved
   </span>
 </footer>
 
@@ -610,6 +610,23 @@ One thing to remember is, even though these symlinks are a reference to the orig
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/">
+                <h3 class="media-heading">Sitecore Launchpad apps and tools made easy with Bookmarklets</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2016
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/">
                 <h3 class="media-heading">TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</h3>
               </a>
@@ -649,7 +666,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         2 posts found
+         3 posts found
       </p>
     </div>
   </div>

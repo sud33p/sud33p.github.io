@@ -53,26 +53,26 @@
 &lt;p&gt;Using Symlinks you can create a junction link on the sitecore install folder, pointing to the &amp;lsquo;Website&amp;rsquo; folder on the Repo. And it will make it look like the &amp;lsquo;Website&amp;rsquo; folder exists within the install folder with all its contents, even though it is just a reference to the actual &amp;lsquo;Website&amp;rsquo; folder within the repo. Think of it as an advanced shortcut, similar to the Windows shortcut link (.lnk) but with greater power.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;What are Symlinks anyway?
+&lt;p&gt;What are Symlinks anyway?&lt;br /&gt;
 Symlinks or Symbolic links, are basically advanced shortcuts. You can create symbolic links to individual files or folders, and then these will appear like they are stored in the folder with the symbolic link even though the symbolic link only points to their real location. &lt;a href=&#34;http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/&#34; target=&#34;_blank&#34;&gt;Read more here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;the-command&#34;&gt;The command&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
-    &lt;strong&gt;MKLINK [[/D] | [/H] | [/J]] Link Target&lt;/strong&gt;
-        /D          Creates a directory symbolic link.  Default is a file symbolic link.
-        /H          Creates a hard link instead of a symbolic link.
-        /J          Creates a Directory Junction.
-        Link        Specifies the new symbolic link name.
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;br /&gt;
+    &lt;strong&gt;MKLINK [[/D] | [/H] | [/J]] Link Target&lt;/strong&gt;&lt;br /&gt;
+        /D          Creates a directory symbolic link.  Default is a file symbolic link.&lt;br /&gt;
+        /H          Creates a hard link instead of a symbolic link.&lt;br /&gt;
+        /J          Creates a Directory Junction.&lt;br /&gt;
+        Link        Specifies the new symbolic link name.&lt;br /&gt;
         Target      Specifies the path (relative or absolute) that the new link refers to.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 
 &lt;p&gt;For our purpose, we need to create a directory junction &lt;code&gt;(/J)&lt;/code&gt; to link to the Website folder. So lets go ahead and do that:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Open command prompt (in Admin mode)&lt;/li&gt;
+&lt;li&gt;Open command prompt (in Admin mode)&lt;br /&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Enter the command &lt;code&gt;mklink /J Link Target&lt;/code&gt;. In our case:&lt;/p&gt;
 

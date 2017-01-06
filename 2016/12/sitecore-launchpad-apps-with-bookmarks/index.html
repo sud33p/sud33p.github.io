@@ -16,26 +16,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.17">
-    <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
+    <title>Sitecore Launchpad apps made easy with Bookmarks</title>
     <meta name="author" content="Sudeep Shakya">
     <meta name="keywords" content=", web development, sitecore, .net, technology">
 
-    <link rel="icon" href="https://blog.sudeepshakya.com/favicon.png">
+    <link rel="icon" href="/favicon.png">
     
 
     
-    <meta name="description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
-An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
-    <meta property="og:description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
-An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
+    <meta name="description" content="I am not sure if it&rsquo;s the pure laziness in me, or an interest in learning new techniques, I try to find easier or quicker ways to do somewhat tedious things (where I can). It must be the laziness, coz I know at times I have wasted my time on some simple tasks, trying to improvise the process, which would have been done quicker the normal way. Like when trying to extract some texts from a 10 line document using RegEx or the very handy sublime text tricks, where it would have taken fraction of that time by simply deleting the unwanted texts manually.">
+    <meta property="og:description" content="I am not sure if it&rsquo;s the pure laziness in me, or an interest in learning new techniques, I try to find easier or quicker ways to do somewhat tedious things (where I can). It must be the laziness, coz I know at times I have wasted my time on some simple tasks, trying to improvise the process, which would have been done quicker the normal way. Like when trying to extract some texts from a 10 line document using RegEx or the very handy sublime text tricks, where it would have taken fraction of that time by simply deleting the unwanted texts manually.">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
-    <meta property="og:url" content="/2016/10/tds-cannot-remove-says-its-in-use/">
+    <meta property="og:title" content="Sitecore Launchpad apps made easy with Bookmarks">
+    <meta property="og:url" content="/2016/12/sitecore-launchpad-apps-with-bookmarks/">
     <meta property="og:site_name" content="Sudeep&#39;s Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Sudeep&#39;s Blog">
-    <meta name="twitter:description" content="Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is Missing in Project and you will choose to Remove from Sitecore but the error window says nah, can&rsquo;t do it.
-An exception occurred while updating the sitecore item /sitecore/item/path/name. The &quot;name&quot; template is in use. Delete all the items that are based on this template. Please see the output window for more details.">
+    <meta name="twitter:description" content="I am not sure if it&rsquo;s the pure laziness in me, or an interest in learning new techniques, I try to find easier or quicker ways to do somewhat tedious things (where I can). It must be the laziness, coz I know at times I have wasted my time on some simple tasks, trying to improvise the process, which would have been done quicker the normal way. Like when trying to extract some texts from a 10 line document using RegEx or the very handy sublime text tricks, where it would have taken fraction of that time by simply deleting the unwanted texts manually.">
     
       <meta name="twitter:creator" content="@sudeep77">
     
@@ -62,7 +59,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" />
     
     
-    <link rel="stylesheet" href="https://blog.sudeepshakya.com/css/style-kgegwhrghzxac3uiqlgfaa9cld0ewwgvqswryuyvfimhypkpslmgl38mmunx.min.css" />
+    <link rel="stylesheet" href="/css/style-kgegwhrghzxac3uiqlgfaa9cld0ewwgvqswryuyvfimhypkpslmgl38mmunx.min.css" />
     
     
     
@@ -85,12 +82,12 @@ ga('send', 'pageview');
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.sudeepshakya.com/">Sudeep&#39;s Blog</a>
+    <a class="header-title-link" href="/">Sudeep&#39;s Blog</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://blog.sudeepshakya.com/#about">
+         href="/#about">
     
     
     
@@ -106,7 +103,7 @@ ga('send', 'pageview');
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://blog.sudeepshakya.com/#about">
+        <a href="/#about">
           <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/66d342a6ee2e19cca3d356a027573ff8?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Sudeep Shakya</h4>
@@ -119,7 +116,7 @@ ga('send', 'pageview');
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/">
+      <a class="sidebar-button-link " href="/">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -129,7 +126,7 @@ ga('send', 'pageview');
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/categories">
+      <a class="sidebar-button-link " href="/categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -139,7 +136,7 @@ ga('send', 'pageview');
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/tags">
+      <a class="sidebar-button-link " href="/tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -149,7 +146,7 @@ ga('send', 'pageview');
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/archives">
+      <a class="sidebar-button-link " href="/archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -159,7 +156,7 @@ ga('send', 'pageview');
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/#about">
+      <a class="sidebar-button-link " href="/#about">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -172,7 +169,7 @@ ga('send', 'pageview');
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/sud33p" target="_blank">
+      <a class="sidebar-button-link " href="https://github.com/sud33p">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -182,7 +179,7 @@ ga('send', 'pageview');
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://twitter.com/sudeep77" target="_blank">
+      <a class="sidebar-button-link " href="https://twitter.com/sudeep77">
     
       <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
       
@@ -195,7 +192,7 @@ ga('send', 'pageview');
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.sudeepshakya.com/index.xml">
+      <a class="sidebar-button-link " href="/index.xml">
     
       <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
       
@@ -219,13 +216,13 @@ ga('send', 'pageview');
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!
+      Sitecore Launchpad apps made easy with Bookmarks
     </h1>
   
   <div class="post-meta">
-  <time itemprop="datePublished" datetime="2016-10-20T20:00:00&#43;10:00">
+  <time itemprop="datePublished" datetime="2016-12-15T19:52:00&#43;10:00">
     
-  October 20, 2016
+  December 15, 2016
 
   </time>
   
@@ -233,9 +230,7 @@ ga('send', 'pageview');
   
     <span>in</span>
     
-      <a class="category-link" href="https://blog.sudeepshakya.com/categories/sitecore">Sitecore</a>, 
-    
-      <a class="category-link" href="https://blog.sudeepshakya.com/categories/team-development-for-sitecore">Team Development for Sitecore</a>
+      <a class="category-link" href="/categories/sitecore">Sitecore</a>
     
   
 
@@ -249,202 +244,23 @@ ga('send', 'pageview');
             <div class="main-content-wrap">
               
 
-<p>Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is <code>Missing in Project</code> and you will choose to <code>Remove from Sitecore</code> but the error window says nah, can&rsquo;t do it.</p>
+<p>I am not sure if it&rsquo;s the pure laziness in me, or an interest in learning new techniques, I try to find easier or quicker ways to do somewhat tedious things (where I can). It must be the laziness, coz I know at times I have wasted my time on  some simple tasks, trying to improvise the process, which would have been done quicker the normal way. Like when trying to extract some texts from a 10 line document using RegEx or the <a href="http://www.hongkiat.com/blog/sublime-text-tips/" target="_blank">very handy sublime text tricks</a>, where it would have taken fraction of that time by simply deleting the unwanted texts manually.</p>
 
-<pre><code class="language-NONE">An exception occurred while updating the sitecore item /sitecore/item/path/name.
+<p>But other times I have come up with or discovered some nice little ways to save time in otherwise the routined workflows. Not really groundbreaking stuffs, but makes a lot of difference in the long run when you are doing the same or similar stuffs repeatedly again and again. In this instance, I am talking about saving some clicks, and page loads.</p>
 
-The &quot;name&quot; template is in use.
+<p>If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of. The biggest problem with the desktop mode (apart from being a memory hog) was, and it still is, that you would lose the state of the opened windows if you refresh the browser. And as developers, that&rsquo;s what you do most of the time.</p>
 
-Delete all the items that are based on this template.
+<p>[Image of desktop mode]</p>
 
-Please see the output window for more details.
-</code></pre>
+<p>Fast forward to 7.1 / 7.2, but really the version 8 and we have now a very stable and handy Launchpad. And as the name suggests, it is the launch pad for the commonly used sitecore applications, and also the new modern SPEAK apps. So you don&rsquo;t have to rely much on the desktop mode now.</p>
 
+<p>[Image of launchpad]</p>
 
+<p>However in saying that, now you need to come back to the Launchpad whenever you need to switch to a different app. This is still far from a painful experience, but I would definitely prefer to cut the &ldquo;middle&rdquo; page out. And so the hunt began.</p>
 
- 
-  
-  
-  
-  
-    
-  
+<h3 id="the-find">The Find</h3>
 
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png" title="TDS says the template is in use" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png"  alt="TDS says the template is in use">
-  
-    </a>
-  
-   
-    <span class="caption">TDS says the template is in use</span>
-  
-</div>
-
-
-<p>First of all, the word &ldquo;occured&rdquo; in the screenshot is incorrect, says <a href="https://en.wiktionary.org/wiki/occured" target="_blank">Wiktionary</a>. But nothing worse than getting this error when you are trying to do a sync on a long list of new/deleted/updated items/templates/whatever, presumably after isolating yourself on your solo <strong>&ldquo;feature&rdquo;</strong> branch for a while.. Actually, the worst one has to be the one where TDS does not have a clue what to blame and just throws an exception. And then you have to scroll down the sync window to find the broken items and manually remove them.</p>
-
-<p>This one is equally bad because there isn&rsquo;t any item that&rsquo;s using the named template. You know there isn&rsquo;t, but TDS says otherwise. So you have to investigate. &ldquo;Links&rdquo; button on the &ldquo;Navigate&rdquo; ribbon to the rescue.</p>
-
-<p><em>Content Editor &gt; Navigate (ribbon) &gt; Links</em><br />
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png" title="Checking the Links referral" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png"  alt="Checking the Links referral">
-  
-    </a>
-  
-   
-    <span class="caption">Checking the Links referral</span>
-  
-</div>
-</p>
-
-<p>Guess what? No content item is using it. The Links window shows a rendering, but it shouldn&rsquo;t as it was updated to use something else, I swear. Let&rsquo;s check further.</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png" title="Checking the rendering datasource template" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png"  alt="Checking the rendering datasource template">
-  
-    </a>
-  
-   
-    <span class="caption">Checking the rendering datasource template</span>
-  
-</div>
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png" title="Checking the branch item template" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png"  alt="Checking the branch item template">
-  
-    </a>
-  
-   
-    <span class="caption">Checking the branch item template</span>
-  
-</div>
-
-
-<p>So further investigation proves that the listed rendering is not using the template at all. What now?</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>It is now obvious that the Links window is not reporting correctly. So definitely a problem with the Links database. Let&rsquo;s go ahead an rebuild it, the <code>master</code> database at a minimum as that&rsquo;s our concern here.</p>
-
-<p><em>Control Panel &gt; (Database) &gt; Rebuild link databases</em><br />
-
- 
-  
-  
-  
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure left" >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png" title="Rebuild Link Databases" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png"  alt="Rebuild Link Databases">
-  
-    </a>
-  
-   
-    <span class="caption">Rebuild Link Databases</span>
-  
-</div>
-
-  <div style="clear:both;"></div>
-</p>
-
-<p>Now check back on the Links window, there is nothing referring to our template now.<br />
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png" title="Checking the Links referral again" data-fancybox-group="group:tds">
-  
-    <img class="fig-img" src="https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png"  alt="Checking the Links referral again">
-  
-    </a>
-  
-   
-    <span class="caption">Checking the Links referral again</span>
-  
-</div>
-</p>
-
-<p>Go ahead and re-sync TDS. It should be able to remove the template now.</p>
-
-<h3 id="conclusion">Conclusion</h3>
-
-<p>So looks like TDS goes through the same sitecore middle layer or uses it for its operations. So next time, if you get this error and you are pretty sure the template is not in use, just go ahead and try your luck by rebuilding the links database.</p>
+<p>I didn&rsquo;t have to go very far.</p>
 
               
             </div>
@@ -456,11 +272,9 @@ Please see the output window for more details.
                 <div class="post-footer-tags">
                   <span class="text-color-light text-small">TAGGED IN</span><br/>
                   
-  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/sitecore/">Sitecore</a>
+  <a class="tag tag--primary tag--small" href="//tags/sitecore/">Sitecore</a>
 
-  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/tds/">TDS</a>
-
-  <a class="tag tag--primary tag--small" href="https://blog.sudeepshakya.com/tags/error/">Error</a>
+  <a class="tag tag--primary tag--small" href="//tags/devtools/">DevTools</a>
 
                 </div>
               
@@ -470,7 +284,7 @@ Please see the output window for more details.
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/" data-tooltip="Sitecore Launchpad apps and tools made easy with Bookmarklets">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -478,7 +292,7 @@ Please see the output window for more details.
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/" data-tooltip="Sitecore and Symlinks (Symbolic Links)">
+          <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -493,17 +307,17 @@ Please see the output window for more details.
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -536,7 +350,7 @@ Please see the output window for more details.
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2017 Sudeep Shakya. All Rights Reserved
+    &copy; 2016 Sudeep Shakya. All Rights Reserved
   </span>
 </footer>
 
@@ -547,7 +361,7 @@ Please see the output window for more details.
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/" data-tooltip="Sitecore Launchpad apps and tools made easy with Bookmarklets">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -555,7 +369,7 @@ Please see the output window for more details.
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/" data-tooltip="Sitecore and Symlinks (Symbolic Links)">
+          <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -570,17 +384,17 @@ Please see the output window for more details.
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -606,17 +420,17 @@ Please see the output window for more details.
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fblog.sudeepshakya.com%2f2016%2f10%2ftds-cannot-remove-says-its-in-use%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarks%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -675,15 +489,15 @@ Please see the output window for more details.
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/">
-                <h3 class="media-heading">Sitecore Launchpad apps and tools made easy with Bookmarklets</h3>
+              <a class="link-unstyled" href="/2016/12/sitecore-launchpad-apps-with-bookmarks/">
+                <h3 class="media-heading">Sitecore Launchpad apps made easy with Bookmarks</h3>
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
                   Dec 12, 2016
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of.</div>
+              <div class="media-content hide-xs font-merryweather">I am not sure if it&rsquo;s the pure laziness in me, or an interest in learning new techniques, I try to find easier or quicker ways to do somewhat tedious things (where I can). It must be the laziness, coz I know at times I have wasted my time on some simple tasks, trying to improvise the process, which would have been done quicker the normal way. Like when trying to extract some texts from a 10 line document using RegEx or the very handy sublime text tricks, where it would have taken fraction of that time by simply deleting the unwanted texts manually.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -692,7 +506,7 @@ Please see the output window for more details.
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/">
+              <a class="link-unstyled" href="/2016/10/tds-cannot-remove-says-its-in-use/">
                 <h3 class="media-heading">TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</h3>
               </a>
               <span class="media-meta">
@@ -710,7 +524,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/">
+              <a class="link-unstyled" href="/2016/09/sitecore-and-symlinks-symbolic-links/">
                 <h3 class="media-heading">Sitecore and Symlinks (Symbolic Links)</h3>
               </a>
               <span class="media-meta">
@@ -739,7 +553,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
     
   
     
-    <div id="cover" style="background-image:url('https://blog.sudeepshakya.com/images/cover.jpg');"></div>
+    <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
   
 
 
@@ -750,7 +564,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.js"></script>
 
 
-<script src="https://blog.sudeepshakya.com/js/script-hmjy8ym7p683xte3qpeticrmnqro7k08vzrdcv5x9ulcf3newhjkd5cs0ipu.min.js"></script>
+<script src="/js/script-hmjy8ym7p683xte3qpeticrmnqro7k08vzrdcv5x9ulcf3newhjkd5cs0ipu.min.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -775,9 +589,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.sudeepshakya.com\/2016\/10\/tds-cannot-remove-says-its-in-use\/';
+          this.page.url = '\/2016\/12\/sitecore-launchpad-apps-with-bookmarks\/';
           
-            this.page.identifier = '\/2016\/10\/tds-cannot-remove-says-its-in-use\/'
+            this.page.identifier = '\/2016\/12\/sitecore-launchpad-apps-with-bookmarks\/'
           
         };
         (function() {

@@ -55,7 +55,7 @@ Please see the output window for more details.
 
 &lt;p&gt;This one is equally bad because there isn&amp;rsquo;t any item that&amp;rsquo;s using the named template. You know there isn&amp;rsquo;t, but TDS says otherwise. So you have to investigate. &amp;ldquo;Links&amp;rdquo; button on the &amp;ldquo;Navigate&amp;rdquo; ribbon to the rescue.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Content Editor &amp;gt; Navigate (ribbon) &amp;gt; Links&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Content Editor &amp;gt; Navigate (ribbon) &amp;gt; Links&lt;/em&gt;&lt;br /&gt;
 
 
  
@@ -136,8 +136,23 @@ Please see the output window for more details.
 
 &lt;p&gt;It is now obvious that the Links window is not reporting correctly. So definitely a problem with the Links database. Let&amp;rsquo;s go ahead an rebuild it, the &lt;code&gt;master&lt;/code&gt; database at a minimum as that&amp;rsquo;s our concern here.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Control Panel &amp;gt; (Database) &amp;gt; Rebuild link databases&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Control Panel &amp;gt; (Database) &amp;gt; Rebuild link databases&lt;/em&gt;&lt;br /&gt;
 
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
 
  
   
@@ -146,8 +161,12 @@ Please see the output window for more details.
   
     
   
+    
+      
+    
+  
 
-&lt;div class=&#34;figure &#34; &gt;
+&lt;div class=&#34;figure left&#34; &gt;
   
     &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
@@ -159,9 +178,11 @@ Please see the output window for more details.
     &lt;span class=&#34;caption&#34;&gt;Rebuild Link Databases&lt;/span&gt;
   
 &lt;/div&gt;
+
+  &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Now check back on the Links window, there is nothing referring to our template now.
+&lt;p&gt;Now check back on the Links window, there is nothing referring to our template now.&lt;br /&gt;
 
 
  

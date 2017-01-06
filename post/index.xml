@@ -6,8 +6,146 @@
     <description>Recent content in Post-rsses on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Oct 2016 20:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Dec 2016 19:52:00 +1000</lastBuildDate>
     <atom:link href="https://blog.sudeepshakya.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sitecore Launchpad apps and tools made easy with Bookmarklets</title>
+      <link>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</link>
+      <pubDate>Fri, 23 Dec 2016 19:52:00 +1000</pubDate>
+      
+      <guid>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</guid>
+      <description>
+
+&lt;p&gt;If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&amp;rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&amp;rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of. The biggest problem with the desktop mode (apart from being a memory hog) was, and it still is, that you would lose the state of the opened windows if you refresh the browser. And as developers, that&amp;rsquo;s what we do most of the time right.&lt;/p&gt;
+
+
+
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-1-desktop-6.png&#34;  alt=&#34; Sitecore 6 Desktop&#34;&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt; Sitecore 6 Desktop&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;Fast forward to 7.1 / 7.2, but really the version 8 and we have now a very stable and handy Launchpad. And as the name suggests, it is the launch pad for the commonly used sitecore applications, and also the new modern SPEAK apps. So you don&amp;rsquo;t have to rely much on the desktop mode now.&lt;/p&gt;
+
+
+
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png&#34;  alt=&#34;Sitecore 8 Launchpad&#34;&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Sitecore 8 Launchpad&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;However in saying that, now you need to come back to the Launchpad whenever you need to switch to a different app. This is an extra page load inbetween switching apps. This is still far from a painful experience but I would definitely prefer to cut this &amp;ldquo;middle&amp;rdquo; page out. I think It is the laziness in me (or my impatience?) that drives me to look for quicker ways to improvise such tedious workflows. And so the hunt began.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-find&#34;&gt;The Find&lt;/h3&gt;
+
+&lt;p&gt;I found a chrome extension called &lt;a href=&#34;https://chrome.google.com/webstore/detail/sitecore-developer-tool/cmbppbejihcnbngefandoljljdppnlda&#34; target=&#34;_blank&#34;&gt;Sitecore Developer Tool&lt;/a&gt; that gives you nice little shortcuts to most common pages/apps in Sitecore. Exactly what I wanted, this tool works with the sitecore url in the current browser tab and lets you quickly switch between admin pages, apps, databases and modes without having to go to the Launchpad or Desktop mode or type the url. Great!!!&lt;/p&gt;
+
+&lt;h3 id=&#34;the-bad&#34;&gt;The Bad&lt;/h3&gt;
+
+&lt;p&gt;This may not be a problem for you if you primarily use Chrome for Sitecore, but lately I have been using Firefox for everything Sitecore. So the biggest drawback for me now is this tool does not have a Firefox counterpart. And I couldn&amp;rsquo;t find any other equivalent. So I had to come up with something.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-bookmarklets&#34;&gt;The Bookmarklets&lt;/h3&gt;
+
+&lt;p&gt;The easy solution was to write bookmarklets. To achieve a similar functionality, I created bookmarklets to most of the common sitecore apps that are accessible from the launchpad and also the admin pages and other tools. These bookmarklets are basically normal bookmarks with scripts to calculate the context site url, hence very light-weight and works with most popular browsers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. Bookmarklets are unobtrusive JavaScripts stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. &lt;a href=&#34;https://en.wikipedia.org/wiki/Bookmarklet&#34; target=&#34;_blank&#34;&gt;Read more here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The advantages:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simple and light-weight&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;works on any sitecore url&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;works on most major browsers&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;can be synced between different browsers and machines using tools like Xmarks Bookmark Sync&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;easily editable and extendable as they are just bookmarks&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Sitecore Launchpad Bookmarkets in Chrome&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Sitecore Launchpad Bookmarkets in Firefox&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;how-to-install&#34;&gt;How to Install&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the bookmarks HTML file from the gist below.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Import the HTML file into your browser via its bookmark manager.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You will see a bookmarks folder called &lt;strong&gt;Sitecore Launchpad&lt;/strong&gt; being imported to the browser&amp;rsquo;s default import location. Feel free to move it where you want.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The HTML file to import&lt;/strong&gt;&lt;br /&gt;
+&lt;script src=&#34;//gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
@@ -56,7 +194,7 @@ Please see the output window for more details.
 
 &lt;p&gt;This one is equally bad because there isn&amp;rsquo;t any item that&amp;rsquo;s using the named template. You know there isn&amp;rsquo;t, but TDS says otherwise. So you have to investigate. &amp;ldquo;Links&amp;rdquo; button on the &amp;ldquo;Navigate&amp;rdquo; ribbon to the rescue.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Content Editor &amp;gt; Navigate (ribbon) &amp;gt; Links&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Content Editor &amp;gt; Navigate (ribbon) &amp;gt; Links&lt;/em&gt;&lt;br /&gt;
 
 
  
@@ -137,8 +275,23 @@ Please see the output window for more details.
 
 &lt;p&gt;It is now obvious that the Links window is not reporting correctly. So definitely a problem with the Links database. Let&amp;rsquo;s go ahead an rebuild it, the &lt;code&gt;master&lt;/code&gt; database at a minimum as that&amp;rsquo;s our concern here.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Control Panel &amp;gt; (Database) &amp;gt; Rebuild link databases&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Control Panel &amp;gt; (Database) &amp;gt; Rebuild link databases&lt;/em&gt;&lt;br /&gt;
 
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
 
  
   
@@ -147,8 +300,12 @@ Please see the output window for more details.
   
     
   
+    
+      
+    
+  
 
-&lt;div class=&#34;figure &#34; &gt;
+&lt;div class=&#34;figure left&#34; &gt;
   
     &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
@@ -160,9 +317,11 @@ Please see the output window for more details.
     &lt;span class=&#34;caption&#34;&gt;Rebuild Link Databases&lt;/span&gt;
   
 &lt;/div&gt;
+
+  &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Now check back on the Links window, there is nothing referring to our template now.
+&lt;p&gt;Now check back on the Links window, there is nothing referring to our template now.&lt;br /&gt;
 
 
  
@@ -240,26 +399,26 @@ Please see the output window for more details.
 &lt;p&gt;Using Symlinks you can create a junction link on the sitecore install folder, pointing to the &amp;lsquo;Website&amp;rsquo; folder on the Repo. And it will make it look like the &amp;lsquo;Website&amp;rsquo; folder exists within the install folder with all its contents, even though it is just a reference to the actual &amp;lsquo;Website&amp;rsquo; folder within the repo. Think of it as an advanced shortcut, similar to the Windows shortcut link (.lnk) but with greater power.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;What are Symlinks anyway?
+&lt;p&gt;What are Symlinks anyway?&lt;br /&gt;
 Symlinks or Symbolic links, are basically advanced shortcuts. You can create symbolic links to individual files or folders, and then these will appear like they are stored in the folder with the symbolic link even though the symbolic link only points to their real location. &lt;a href=&#34;http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/&#34; target=&#34;_blank&#34;&gt;Read more here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;the-command&#34;&gt;The command&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
-    &lt;strong&gt;MKLINK [[/D] | [/H] | [/J]] Link Target&lt;/strong&gt;
-        /D          Creates a directory symbolic link.  Default is a file symbolic link.
-        /H          Creates a hard link instead of a symbolic link.
-        /J          Creates a Directory Junction.
-        Link        Specifies the new symbolic link name.
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;br /&gt;
+    &lt;strong&gt;MKLINK [[/D] | [/H] | [/J]] Link Target&lt;/strong&gt;&lt;br /&gt;
+        /D          Creates a directory symbolic link.  Default is a file symbolic link.&lt;br /&gt;
+        /H          Creates a hard link instead of a symbolic link.&lt;br /&gt;
+        /J          Creates a Directory Junction.&lt;br /&gt;
+        Link        Specifies the new symbolic link name.&lt;br /&gt;
         Target      Specifies the path (relative or absolute) that the new link refers to.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 
 &lt;p&gt;For our purpose, we need to create a directory junction &lt;code&gt;(/J)&lt;/code&gt; to link to the Website folder. So lets go ahead and do that:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Open command prompt (in Admin mode)&lt;/li&gt;
+&lt;li&gt;Open command prompt (in Admin mode)&lt;br /&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Enter the command &lt;code&gt;mklink /J Link Target&lt;/code&gt;. In our case:&lt;/p&gt;
 
