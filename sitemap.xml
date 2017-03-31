@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.sudeepshakya.com/</loc>
-    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <loc>https://blog.sudeepshakya.com/2017/03/google-home-talks-to-home-assistant/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
   </url>
   
   <url>
@@ -19,6 +19,100 @@
   <url>
     <loc>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</loc>
     <lastmod>2016-09-03T01:02:07+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/development/</loc>
+    <lastmod>2016-09-03T01:02:07+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/devtools/</loc>
+    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/error/</loc>
+    <lastmod>2016-10-20T20:00:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/google-home/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/home-assistant/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/categories/home-automation/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/iot/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/post/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/sitecore/</loc>
+    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/categories/sitecore/</loc>
+    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/smart-home/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/</loc>
+    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/tags/tds/</loc>
+    <lastmod>2016-10-20T20:00:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sudeepshakya.com/categories/team-development-for-sitecore/</loc>
+    <lastmod>2016-10-20T20:00:00+10:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
