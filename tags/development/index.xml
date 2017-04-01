@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Sudeep&#39;s Blog</title>
-    <link>https://blog.sudeepshakya.com/tags/development/index.xml</link>
+    <link>/tags/development/index.xml</link>
     <description>Recent content in Development on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.sudeepshakya.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sitecore and Symlinks (Symbolic Links)</title>
-      <link>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</link>
+      <link>/2016/09/sitecore-and-symlinks-symbolic-links/</link>
       <pubDate>Sat, 03 Sep 2016 01:02:07 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
+      <guid>/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
       <description>
 
 &lt;p&gt;You must be wondering, what&amp;rsquo;s the relation here? There isn&amp;rsquo;t really, yet there could very well be one, if you want&amp;hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&amp;rsquo;t think there are more than 100 ways). That&amp;rsquo;s still a lot.&lt;/p&gt;
@@ -34,9 +34,9 @@
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-1.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-1.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
   
     &lt;/a&gt;
   
@@ -107,9 +107,9 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png&#34; title=&#34;Directory junction created&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-2.png&#34; title=&#34;Directory junction created&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png&#34;  alt=&#34;Directory junction created&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-2.png&#34;  alt=&#34;Directory junction created&#34;&gt;
   
     &lt;/a&gt;
   
@@ -133,9 +133,9 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-3.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-3.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
   
     &lt;/a&gt;
   

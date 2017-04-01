@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devtools on Sudeep&#39;s Blog</title>
-    <link>https://blog.sudeepshakya.com/tags/devtools/index.xml</link>
+    <link>/tags/devtools/index.xml</link>
     <description>Recent content in Devtools on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.sudeepshakya.com/tags/devtools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/devtools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sitecore Launchpad apps and tools made easy with Bookmarklets</title>
-      <link>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</link>
+      <link>/2016/12/sitecore-launchpad-apps-with-bookmarklets/</link>
       <pubDate>Fri, 23 Dec 2016 19:52:00 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</guid>
+      <guid>/2016/12/sitecore-launchpad-apps-with-bookmarklets/</guid>
       <description>
 
 &lt;p&gt;If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&amp;rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&amp;rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of. The biggest problem with the desktop mode (apart from being a memory hog) was, and it still is, that you would lose the state of the opened windows if you refresh the browser. And as developers, that&amp;rsquo;s what we do most of the time right.&lt;/p&gt;
@@ -23,7 +23,7 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-1-desktop-6.png&#34;  alt=&#34; Sitecore 6 Desktop&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-1-desktop-6.png&#34;  alt=&#34; Sitecore 6 Desktop&#34;&gt;
   
    
     &lt;span class=&#34;caption&#34;&gt; Sitecore 6 Desktop&lt;/span&gt;
@@ -38,7 +38,7 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png&#34;  alt=&#34;Sitecore 8 Launchpad&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png&#34;  alt=&#34;Sitecore 8 Launchpad&#34;&gt;
   
    
     &lt;span class=&#34;caption&#34;&gt;Sitecore 8 Launchpad&lt;/span&gt;
@@ -91,9 +91,9 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34;&gt;
   
     &lt;/a&gt;
   
@@ -119,9 +119,9 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34;&gt;
   
     &lt;/a&gt;
   

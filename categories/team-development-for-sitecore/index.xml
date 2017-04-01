@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Team Development For Sitecore on Sudeep&#39;s Blog</title>
-    <link>https://blog.sudeepshakya.com/categories/team-development-for-sitecore/index.xml</link>
+    <link>/categories/team-development-for-sitecore/index.xml</link>
     <description>Recent content in Team Development For Sitecore on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.sudeepshakya.com/categories/team-development-for-sitecore/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/team-development-for-sitecore/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
-      <link>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</link>
+      <link>/2016/10/tds-cannot-remove-says-its-in-use/</link>
       <pubDate>Thu, 20 Oct 2016 20:00:00 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</guid>
+      <guid>/2016/10/tds-cannot-remove-says-its-in-use/</guid>
       <description>
 
 &lt;p&gt;Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is &lt;code&gt;Missing in Project&lt;/code&gt; and you will choose to &lt;code&gt;Remove from Sitecore&lt;/code&gt; but the error window says nah, can&amp;rsquo;t do it.&lt;/p&gt;
@@ -39,9 +39,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34; title=&#34;TDS says the template is in use&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-1-sync-error.png&#34; title=&#34;TDS says the template is in use&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34;  alt=&#34;TDS says the template is in use&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-1-sync-error.png&#34;  alt=&#34;TDS says the template is in use&#34;&gt;
   
     &lt;/a&gt;
   
@@ -68,9 +68,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34; title=&#34;Checking the Links referral&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-2-links-window.png&#34; title=&#34;Checking the Links referral&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34;  alt=&#34;Checking the Links referral&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-2-links-window.png&#34;  alt=&#34;Checking the Links referral&#34;&gt;
   
     &lt;/a&gt;
   
@@ -94,9 +94,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34; title=&#34;Checking the rendering datasource template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-3-links-rendering.png&#34; title=&#34;Checking the rendering datasource template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34;  alt=&#34;Checking the rendering datasource template&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-3-links-rendering.png&#34;  alt=&#34;Checking the rendering datasource template&#34;&gt;
   
     &lt;/a&gt;
   
@@ -118,9 +118,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34; title=&#34;Checking the branch item template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-4-links-branch-source.png&#34; title=&#34;Checking the branch item template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34;  alt=&#34;Checking the branch item template&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-4-links-branch-source.png&#34;  alt=&#34;Checking the branch item template&#34;&gt;
   
     &lt;/a&gt;
   
@@ -168,9 +168,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure left&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34;  alt=&#34;Rebuild Link Databases&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-5-links-rebuild.png&#34;  alt=&#34;Rebuild Link Databases&#34;&gt;
   
     &lt;/a&gt;
   
@@ -195,9 +195,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34; title=&#34;Checking the Links referral again&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-6-links-window-clean.png&#34; title=&#34;Checking the Links referral again&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34;  alt=&#34;Checking the Links referral again&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-6-links-window-clean.png&#34;  alt=&#34;Checking the Links referral again&#34;&gt;
   
     &lt;/a&gt;
   

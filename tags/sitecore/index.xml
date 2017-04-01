@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sitecore on Sudeep&#39;s Blog</title>
-    <link>https://blog.sudeepshakya.com/tags/sitecore/index.xml</link>
+    <link>/tags/sitecore/index.xml</link>
     <description>Recent content in Sitecore on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.sudeepshakya.com/tags/sitecore/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/sitecore/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sitecore Launchpad apps and tools made easy with Bookmarklets</title>
-      <link>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</link>
+      <link>/2016/12/sitecore-launchpad-apps-with-bookmarklets/</link>
       <pubDate>Fri, 23 Dec 2016 19:52:00 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/12/sitecore-launchpad-apps-with-bookmarklets/</guid>
+      <guid>/2016/12/sitecore-launchpad-apps-with-bookmarklets/</guid>
       <description>
 
 &lt;p&gt;If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&amp;rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&amp;rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of. The biggest problem with the desktop mode (apart from being a memory hog) was, and it still is, that you would lose the state of the opened windows if you refresh the browser. And as developers, that&amp;rsquo;s what we do most of the time right.&lt;/p&gt;
@@ -23,7 +23,7 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-1-desktop-6.png&#34;  alt=&#34; Sitecore 6 Desktop&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-1-desktop-6.png&#34;  alt=&#34; Sitecore 6 Desktop&#34;&gt;
   
    
     &lt;span class=&#34;caption&#34;&gt; Sitecore 6 Desktop&lt;/span&gt;
@@ -38,7 +38,7 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png&#34;  alt=&#34;Sitecore 8 Launchpad&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png&#34;  alt=&#34;Sitecore 8 Launchpad&#34;&gt;
   
    
     &lt;span class=&#34;caption&#34;&gt;Sitecore 8 Launchpad&lt;/span&gt;
@@ -91,9 +91,9 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-3-chrome.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Chrome&#34;&gt;
   
     &lt;/a&gt;
   
@@ -119,9 +119,9 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34; title=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34; data-fancybox-group=&#34;group:bookmarklets&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-launchpad-bookmarklets-4-firefox.png&#34;  alt=&#34;Sitecore Launchpad Bookmarkets in Firefox&#34;&gt;
   
     &lt;/a&gt;
   
@@ -148,10 +148,10 @@
     
     <item>
       <title>TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!</title>
-      <link>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</link>
+      <link>/2016/10/tds-cannot-remove-says-its-in-use/</link>
       <pubDate>Thu, 20 Oct 2016 20:00:00 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/10/tds-cannot-remove-says-its-in-use/</guid>
+      <guid>/2016/10/tds-cannot-remove-says-its-in-use/</guid>
       <description>
 
 &lt;p&gt;Have you seen this error before? You normally get this on the TDS sync window when TDS says the template is &lt;code&gt;Missing in Project&lt;/code&gt; and you will choose to &lt;code&gt;Remove from Sitecore&lt;/code&gt; but the error window says nah, can&amp;rsquo;t do it.&lt;/p&gt;
@@ -177,9 +177,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34; title=&#34;TDS says the template is in use&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-1-sync-error.png&#34; title=&#34;TDS says the template is in use&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-1-sync-error.png&#34;  alt=&#34;TDS says the template is in use&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-1-sync-error.png&#34;  alt=&#34;TDS says the template is in use&#34;&gt;
   
     &lt;/a&gt;
   
@@ -206,9 +206,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34; title=&#34;Checking the Links referral&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-2-links-window.png&#34; title=&#34;Checking the Links referral&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-2-links-window.png&#34;  alt=&#34;Checking the Links referral&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-2-links-window.png&#34;  alt=&#34;Checking the Links referral&#34;&gt;
   
     &lt;/a&gt;
   
@@ -232,9 +232,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34; title=&#34;Checking the rendering datasource template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-3-links-rendering.png&#34; title=&#34;Checking the rendering datasource template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-3-links-rendering.png&#34;  alt=&#34;Checking the rendering datasource template&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-3-links-rendering.png&#34;  alt=&#34;Checking the rendering datasource template&#34;&gt;
   
     &lt;/a&gt;
   
@@ -256,9 +256,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34; title=&#34;Checking the branch item template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-4-links-branch-source.png&#34; title=&#34;Checking the branch item template&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-4-links-branch-source.png&#34;  alt=&#34;Checking the branch item template&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-4-links-branch-source.png&#34;  alt=&#34;Checking the branch item template&#34;&gt;
   
     &lt;/a&gt;
   
@@ -306,9 +306,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure left&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-5-links-rebuild.png&#34; title=&#34;Rebuild Link Databases&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-5-links-rebuild.png&#34;  alt=&#34;Rebuild Link Databases&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-5-links-rebuild.png&#34;  alt=&#34;Rebuild Link Databases&#34;&gt;
   
     &lt;/a&gt;
   
@@ -333,9 +333,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34; title=&#34;Checking the Links referral again&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/tds-inuse-6-links-window-clean.png&#34; title=&#34;Checking the Links referral again&#34; data-fancybox-group=&#34;group:tds&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/tds-inuse-6-links-window-clean.png&#34;  alt=&#34;Checking the Links referral again&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/tds-inuse-6-links-window-clean.png&#34;  alt=&#34;Checking the Links referral again&#34;&gt;
   
     &lt;/a&gt;
   
@@ -355,10 +355,10 @@ Please see the output window for more details.
     
     <item>
       <title>Sitecore and Symlinks (Symbolic Links)</title>
-      <link>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</link>
+      <link>/2016/09/sitecore-and-symlinks-symbolic-links/</link>
       <pubDate>Sat, 03 Sep 2016 01:02:07 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
+      <guid>/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
       <description>
 
 &lt;p&gt;You must be wondering, what&amp;rsquo;s the relation here? There isn&amp;rsquo;t really, yet there could very well be one, if you want&amp;hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&amp;rsquo;t think there are more than 100 ways). That&amp;rsquo;s still a lot.&lt;/p&gt;
@@ -379,9 +379,9 @@ Please see the output window for more details.
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-1.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-1.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-1.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
   
     &lt;/a&gt;
   
@@ -452,9 +452,9 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png&#34; title=&#34;Directory junction created&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-2.png&#34; title=&#34;Directory junction created&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-2.png&#34;  alt=&#34;Directory junction created&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-2.png&#34;  alt=&#34;Directory junction created&#34;&gt;
   
     &lt;/a&gt;
   
@@ -478,9 +478,9 @@ Symlinks or Symbolic links, are basically advanced shortcuts. You can create sym
 
 &lt;div class=&#34;figure &#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-3.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/sitecore-symlinks-diagram-3.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-3.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
   
     &lt;/a&gt;
   

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Smart Home on Sudeep&#39;s Blog</title>
-    <link>https://blog.sudeepshakya.com/tags/smart-home/index.xml</link>
+    <link>/tags/smart-home/index.xml</link>
     <description>Recent content in Smart Home on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.sudeepshakya.com/tags/smart-home/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/smart-home/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Google Home talks to Home Assistant... (Sort of!)</title>
-      <link>https://blog.sudeepshakya.com/2017/03/google-home-talks-to-home-assistant/</link>
+      <link>/2017/03/google-home-talks-to-home-assistant/</link>
       <pubDate>Wed, 15 Mar 2017 20:20:00 +1000</pubDate>
       
-      <guid>https://blog.sudeepshakya.com/2017/03/google-home-talks-to-home-assistant/</guid>
+      <guid>/2017/03/google-home-talks-to-home-assistant/</guid>
       <description>
 
 
@@ -21,11 +21,15 @@
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/home-assistant-google-home-1.png&#34; &gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/home-assistant-google-home-1.png&#34; &gt;
   
   
 &lt;/div&gt;
 
+
+&lt;blockquote&gt;
+&lt;p&gt;Hey Google&amp;hellip; turn on the kitchen light!&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;I had been waiting to get my hands on &lt;a href=&#34;https://madeby.google.com/home/&#34; target=&#34;_blank&#34;&gt;Google Home&lt;/a&gt; since it was first announced, and was trying to find all the valid reasons not to jump on the Amazon Echo bandwagon yet.&lt;/p&gt;
 
@@ -134,9 +138,9 @@ http://&amp;lt;HA IP Address&amp;gt;/api/pi/lights - returns the above feed, lis
 
 &lt;div class=&#34;figure center&#34; &gt;
   
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://blog.sudeepshakya.com/images/home-assistant-google-home-2-android-app.png&#34; title=&#34;Android Google Home app&#34; data-fancybox-group=&#34;&#34;&gt;
+    &lt;a class=&#34;fancybox&#34; href=&#34;/images/home-assistant-google-home-2-android-app.png&#34; title=&#34;Android Google Home app&#34; data-fancybox-group=&#34;&#34;&gt;
   
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://blog.sudeepshakya.com/images/home-assistant-google-home-2-android-app.png&#34; style=&#34;width: 50%;&#34; alt=&#34;Android Google Home app&#34;&gt;
+    &lt;img class=&#34;fig-img&#34; src=&#34;/images/home-assistant-google-home-2-android-app.png&#34; style=&#34;width: 50%;&#34; alt=&#34;Android Google Home app&#34;&gt;
   
     &lt;/a&gt;
   
@@ -156,7 +160,7 @@ http://&amp;lt;HA IP Address&amp;gt;/api/pi/lights - returns the above feed, lis
  &lt;/div&gt;
 
 
-&lt;p&gt;And once in a while, make sure to get up and exercise those thumgs and fingers.&lt;/p&gt;
+&lt;p&gt;And once in a while, make sure to get up and exercise those thumbs and fingers.&lt;/p&gt;
 
 &lt;div class=&#34;alert warning &#34;&gt;
   &lt;p&gt;
