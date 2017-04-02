@@ -134,14 +134,14 @@
 &lt;h3 id=&#34;how-to-install&#34;&gt;How to Install&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download the bookmarks HTML file from the gist below.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e/raw/32e848108ecdda3ebb21ffbf8c82d047a3fb7770/Sitecore%2520Launchpad%2520Bookmarklets.html&#34; download=&#34;SitecoreLaunchpadBookmarklets.html&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; the bookmarks HTML file from the gist below.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Import the HTML file into your browser via its bookmark manager.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;You will see a bookmarks folder called &lt;strong&gt;Sitecore Launchpad&lt;/strong&gt; being imported to the browser&amp;rsquo;s default import location. Feel free to move it where you want.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;The HTML file to import&lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;The HTML file to import&lt;/strong&gt; [&lt;a href=&#34;https://gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e/raw/32e848108ecdda3ebb21ffbf8c82d047a3fb7770/Sitecore%2520Launchpad%2520Bookmarklets.html&#34; download=&#34;SitecoreLaunchpadBookmarklets.html&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;]&lt;br /&gt;
 &lt;script src=&#34;//gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
