@@ -18,15 +18,12 @@
 
 &lt;p&gt;This is a typical site definition entry:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;site name=&amp;quot;3littlekittens&amp;quot; enableTracking=&amp;quot;true&amp;quot; virtualFolder=&amp;quot;/&amp;quot; physicalFolder=&amp;quot;/&amp;quot; 
-rootPath=&amp;quot;/sitecore/content&amp;quot; startItem=&amp;quot;/home&amp;quot; database=&amp;quot;web&amp;quot; 
-domain=&amp;quot;extranet&amp;quot; 
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;site name=&amp;quot;website&amp;quot; enableTracking=&amp;quot;true&amp;quot; virtualFolder=&amp;quot;/&amp;quot; physicalFolder=&amp;quot;/&amp;quot; 
+rootPath=&amp;quot;/sitecore/content&amp;quot; startItem=&amp;quot;/home&amp;quot; database=&amp;quot;web&amp;quot; domain=&amp;quot;extranet&amp;quot; 
 allowDebug=&amp;quot;true&amp;quot; cacheHtml=&amp;quot;true&amp;quot; htmlCacheSize=&amp;quot;50MB&amp;quot; registryCacheSize=&amp;quot;0&amp;quot; 
-viewStateCacheSize=&amp;quot;0&amp;quot; xslCacheSize=&amp;quot;25MB&amp;quot; 
-filteredItemsCacheSize=&amp;quot;10MB&amp;quot; 
+viewStateCacheSize=&amp;quot;0&amp;quot; xslCacheSize=&amp;quot;25MB&amp;quot; filteredItemsCacheSize=&amp;quot;10MB&amp;quot; 
 enablePreview=&amp;quot;true&amp;quot; enableWebEdit=&amp;quot;true&amp;quot; enableDebugger=&amp;quot;true&amp;quot; 
-disableClientData=&amp;quot;false&amp;quot; 
-cacheRenderingParameters=&amp;quot;true&amp;quot; 
+disableClientData=&amp;quot;false&amp;quot; cacheRenderingParameters=&amp;quot;true&amp;quot; 
 renderingParametersCacheSize=&amp;quot;10MB&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
