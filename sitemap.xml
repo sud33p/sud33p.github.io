@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/08/sitecore-site-definition-name-cannot-start-number/</loc>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/03/google-home-talks-to-home-assistant/</loc>
     <lastmod>2017-03-15T20:20:00+10:00</lastmod>
   </url>
@@ -70,19 +75,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/sitecore/</loc>
-    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/sitecore/</loc>
-    <lastmod>2016-12-23T19:52:00+10:00</lastmod>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,7 +99,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-03-15T20:20:00+10:00</lastmod>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,6 +117,12 @@
   <url>
     <loc>/categories/team-development-for-sitecore/</loc>
     <lastmod>2016-10-20T20:00:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/xpath/</loc>
+    <lastmod>2017-08-15T18:55:00+10:00</lastmod>
     <priority>0</priority>
   </url>
   
