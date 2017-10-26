@@ -15,7 +15,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.19">
+    <meta name="generator" content="Hugo 0.26">
     <title>Sitecore and Symlinks (Symbolic Links)</title>
     <meta name="author" content="Sudeep Shakya">
     <meta name="keywords" content=", web development, sitecore, .net, technology">
@@ -411,7 +411,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/categories/" data-tooltip="Categories">
+          <a class="post-action-btn btn btn--disabled">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -488,7 +488,7 @@ One thing to remember is, even though these symlinks are a reference to the orig
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/categories/" data-tooltip="Categories">
+          <a class="post-action-btn btn btn--disabled">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -608,6 +608,23 @@ One thing to remember is, even though these symlinks are a reference to the orig
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="/2017/10/sitecore-route-keys-in-mvc-areas-does-not-get-processed/">
+                <h3 class="media-heading">Sitecore&#39;s route keys &#39;scItemPath&#39; and &#39;scLanguage&#39; doesn&#39;t get processed when used with custom routes in MVC Areas (bug?)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax <em>Application_Start</em> method into custom <code>&lt;initialize&gt;</code> pipelines. As part of the clean-up, I removed the <code>AreaRegistration.RegisterAllAreas()</code> call as Sitecore now does it within the <em>InitializeRoutes</em> pipeline:</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="/2017/08/sitecore-site-definition-name-cannot-start-number/">
                 <h3 class="media-heading">Sitecore&#39;s site definition name cannot start with a number</h3>
               </a>
@@ -703,7 +720,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
-                  Aug 8, 2017
+                  Oct 10, 2017
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"></div>
@@ -719,7 +736,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         6 posts found
+         7 posts found
       </p>
     </div>
   </div>

@@ -15,7 +15,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.19">
+    <meta name="generator" content="Hugo 0.26">
     <title>Google Home talks to Home Assistant... (Sort of!)</title>
     <meta name="author" content="Sudeep Shakya">
     <meta name="keywords" content=", web development, sitecore, .net, technology">
@@ -291,59 +291,59 @@ ga('send', 'pageview');
 
 <h4 id="the-feed">The feed:</h4>
 
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">{</span>
-  <span style="color: #f92672">&quot;13&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #f92672">&quot;modelid&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;HASS123&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Driveway Light&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;state&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">{</span>
-      <span style="color: #f92672">&quot;bri&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
-      <span style="color: #f92672">&quot;on&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">false</span><span style="color: #f8f8f2">,</span>
-      <span style="color: #f92672">&quot;reachable&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span>
-    <span style="color: #f8f8f2">},</span>
-    <span style="color: #f92672">&quot;swversion&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;123&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;type&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Dimmable light&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;uniqueid&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;switch.outdoorlight_switch_6_0_2&quot;</span>
-  <span style="color: #f8f8f2">},</span>
-  <span style="color: #f92672">&quot;14&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #f92672">&quot;modelid&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;HASS123&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;name&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Room Heater&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;state&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">{</span>
-      <span style="color: #f92672">&quot;bri&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
-      <span style="color: #f92672">&quot;on&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">false</span><span style="color: #f8f8f2">,</span>
-      <span style="color: #f92672">&quot;reachable&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span>
-    <span style="color: #f8f8f2">},</span>
-    <span style="color: #f92672">&quot;swversion&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;123&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;type&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Dimmable light&quot;</span><span style="color: #f8f8f2">,</span>
-    <span style="color: #f92672">&quot;uniqueid&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;switch.wemo_switch&quot;</span>
-  <span style="color: #f8f8f2">}</span>
-  <span style="color: #960050; background-color: #1e0010">...</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div>
+
+{
+  "13": {
+    "modelid": "HASS123",
+    "name": "Driveway Light",
+    "state": {
+      "bri": 0,
+      "on": false,
+      "reachable": true
+    },
+    "swversion": "123",
+    "type": "Dimmable light",
+    "uniqueid": "switch.outdoorlight_switch_6_0_2"
+  },
+  "14": {
+    "modelid": "HASS123",
+    "name": "Room Heater",
+    "state": {
+      "bri": 0,
+      "on": false,
+      "reachable": true
+    },
+    "swversion": "123",
+    "type": "Dimmable light",
+    "uniqueid": "switch.wemo_switch"
+  }
+  ...
+}
 
 
 <h3 id="the-configuration">The Configuration</h3>
 
 <p>To enable and configure Emulated Hue Bridge for Google Home, this is the minimum configuration that you will need to add to your <em>configuration.yaml</em> file. Make sure that <code>listen_port</code> is set to <strong>80</strong> as Google Home does not work with other ports.</p>
 
-<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #ae81ff">emulated_hue</span><span style="color: #f8f8f2">:</span>
-  <span style="color: #ae81ff">type</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">google_home</span>  
-  <span style="color: #ae81ff">listen_port</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">80</span>
-</pre></div>
-</p>
+
+emulated_hue:
+  type: google_home  
+  listen_port: 80
+
 
 <p>The following is my configuration where I have limited the control to certain domains. The <code>exposed_domains</code> variable allows you to specify what domain entities are visible for Google Home to control. For majority of you and your configuration, you would want to limit the domains entities. You wouldn&rsquo;t want everything to be controlled as lights, as that&rsquo;s how Google Home sees them.</p>
 
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #ae81ff">emulated_hue</span><span style="color: #f8f8f2">:</span>
-  <span style="color: #ae81ff">type</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">google_home</span>
-  <span style="color: #ae81ff">host_ip</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">192.168.1.8</span>
-  <span style="color: #ae81ff">listen_port</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">80</span>
-  <span style="color: #ae81ff">expose_by_default</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">true</span>
-  <span style="color: #ae81ff">exposed_domains</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">light</span>
-    <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">switch</span>
-    <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">input_boolean</span>
-    <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">media_player</span>
-</pre></div>
+
+emulated_hue:
+  type: google_home
+  host_ip: 192.168.1.8
+  listen_port: 80
+  expose_by_default: true
+  exposed_domains:
+    - light
+    - switch
+    - input_boolean
+    - media_player
 
 
 <div class="alert info no-icon ">
@@ -639,6 +639,23 @@ http://&lt;HA IP Address&gt;/api/pi/lights - returns the above feed, list of ent
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="/2017/10/sitecore-route-keys-in-mvc-areas-does-not-get-processed/">
+                <h3 class="media-heading">Sitecore&#39;s route keys &#39;scItemPath&#39; and &#39;scLanguage&#39; doesn&#39;t get processed when used with custom routes in MVC Areas (bug?)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax <em>Application_Start</em> method into custom <code>&lt;initialize&gt;</code> pipelines. As part of the clean-up, I removed the <code>AreaRegistration.RegisterAllAreas()</code> call as Sitecore now does it within the <em>InitializeRoutes</em> pipeline:</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="/2017/08/sitecore-site-definition-name-cannot-start-number/">
                 <h3 class="media-heading">Sitecore&#39;s site definition name cannot start with a number</h3>
               </a>
@@ -734,7 +751,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
-                  Aug 8, 2017
+                  Oct 10, 2017
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"></div>
@@ -750,7 +767,7 @@ An exception occurred while updating the sitecore item /sitecore/item/path/name.
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         6 posts found
+         7 posts found
       </p>
     </div>
   </div>

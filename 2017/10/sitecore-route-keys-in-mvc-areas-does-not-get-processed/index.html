@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.26">
-    <title>Sitecore Launchpad apps and tools made easy with Bookmarklets</title>
+    <title>Sitecore&#39;s route keys &#39;scItemPath&#39; and &#39;scLanguage&#39; doesn&#39;t get processed when used with custom routes in MVC Areas (bug?)</title>
     <meta name="author" content="Sudeep Shakya">
     <meta name="keywords" content=", web development, sitecore, .net, technology">
 
@@ -24,15 +24,15 @@
     
 
     
-    <meta name="description" content="If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of.">
-    <meta property="og:description" content="If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of.">
+    <meta name="description" content="I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax Application_Start method into custom &lt;initialize&gt; pipelines. As part of the clean-up, I removed the AreaRegistration.RegisterAllAreas() call as Sitecore now does it within the InitializeRoutes pipeline:">
+    <meta property="og:description" content="I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax Application_Start method into custom &lt;initialize&gt; pipelines. As part of the clean-up, I removed the AreaRegistration.RegisterAllAreas() call as Sitecore now does it within the InitializeRoutes pipeline:">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Sitecore Launchpad apps and tools made easy with Bookmarklets">
-    <meta property="og:url" content="/2016/12/sitecore-launchpad-apps-with-bookmarklets/">
+    <meta property="og:title" content="Sitecore&#39;s route keys &#39;scItemPath&#39; and &#39;scLanguage&#39; doesn&#39;t get processed when used with custom routes in MVC Areas (bug?)">
+    <meta property="og:url" content="/2017/10/sitecore-route-keys-in-mvc-areas-does-not-get-processed/">
     <meta property="og:site_name" content="Sudeep&#39;s Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Sudeep&#39;s Blog">
-    <meta name="twitter:description" content="If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of.">
+    <meta name="twitter:description" content="I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax Application_Start method into custom &lt;initialize&gt; pipelines. As part of the clean-up, I removed the AreaRegistration.RegisterAllAreas() call as Sitecore now does it within the InitializeRoutes pipeline:">
     
       <meta name="twitter:creator" content="@sudeep77">
     
@@ -46,7 +46,7 @@
     
 
     
-      <meta property="og:image" content="/images/sitecore-launchpad-bookmarklets-thumbnail.png">
+      <meta property="og:image" content="/images/sitecore-route-keys-mvc-areas-issue-0-thumb.png">
     
     
     
@@ -216,13 +216,13 @@ ga('send', 'pageview');
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Sitecore Launchpad apps and tools made easy with Bookmarklets
+      Sitecore&#39;s route keys &#39;scItemPath&#39; and &#39;scLanguage&#39; doesn&#39;t get processed when used with custom routes in MVC Areas (bug?)
     </h1>
   
   <div class="post-meta">
-  <time itemprop="datePublished" datetime="2016-12-23T19:52:00&#43;10:00">
+  <time itemprop="datePublished" datetime="2017-10-23T14:00:00&#43;10:00">
     
-  December 23, 2016
+  October 23, 2017
 
   </time>
   
@@ -242,136 +242,135 @@ ga('send', 'pageview');
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>I recently upgraded an instance from Sitecore 8.1 update 3 to 8.2 update 5 and cleaned up/refactored a lot of code, especially moved the initialization stuffs from the global.asax <em>Application_Start</em> method into custom <code>&lt;initialize&gt;</code> pipelines. As part of the clean-up, I removed the <code>AreaRegistration.RegisterAllAreas()</code> call as Sitecore now does it within the <em>InitializeRoutes</em> pipeline:</p>
 
-<p>If you have worked with Sitecore for a while, in the version 6 or earlier days, you would remember that we didn&rsquo;t have the luxury of Launchpad back then. You would spend most of the time in the desktop mode because that&rsquo;s how you access most of the apps, from the start menu. Or the desktop shortcuts, which I almost never used, and I doubt most people even knew of. The biggest problem with the desktop mode (apart from being a memory hog) was, and it still is, that you would lose the state of the opened windows if you refresh the browser. And as developers, that&rsquo;s what we do most of the time right.</p>
+<pre><code class="language-xml">&lt;initialize&gt;
+    ...
+    &lt;processor type=&quot;Sitecore.Mvc.Pipelines.Loader.InitializeRoutes, Sitecore.Mvc&quot; /&gt;
+    ...
+&lt;/initialize&gt;
+</code></pre>
 
+<h3 id="the-issue">The Issue</h3>
 
+<p>That was all good until I noticed one of my custom route wasn&rsquo;t working. This route was in one of the mvc areas:</p>
 
+<pre><code class="language-cs">context.MapRoute(&quot;Area1_Search&quot;,
+    &quot;search/{query}/{page}&quot;,
+    new { scItemPath = &quot;/search&quot;, page = UrlParameter.Optional },
+    new { page = @&quot;[0-9]*&quot; });
+</code></pre>
 
-<div class="figure center" >
-  
-    <img class="fig-img" src="/images/sitecore-launchpad-bookmarklets-1-desktop-6.png"  alt=" Sitecore 6 Desktop">
-  
-   
-    <span class="caption"> Sitecore 6 Desktop</span>
-  
-</div>
+<p>The error was:</p>
 
+<pre><code class="language-error">InvalidOperationException: The matched route does not include a 'controller' route value, 
+which is required
+</code></pre>
 
-<p>Fast forward to 7.1 / 7.2, but really the version 8 and we have now a very stable and handy Launchpad. And as the name suggests, it is the launch pad for the commonly used sitecore applications, and also the new modern SPEAK apps. So you don&rsquo;t have to rely much on the desktop mode now.</p>
+<p>After a while of digging and debugging, I narrowed it down to the <code>scItemPath</code> key attribute to be the problem. For some reason this wasn&rsquo;t getting resolved.</p>
 
+<p>What does <code>scItemPath</code> do? Well, from the Sitecore docs:</p>
 
+<pre><code class="language-example">scItemPath – regardless of the route URL, the item is resolved using the value of this element
 
+Add a route similar to this example:
+routes.MapRoute(&quot;product&quot;, &quot;product/{*pathInfo}&quot;, new { scItemPath = &quot;/{*pathInfo}&quot;});
 
-<div class="figure center" >
-  
-    <img class="fig-img" src="/images/sitecore-launchpad-bookmarklets-2-launchpad-8.png"  alt="Sitecore 8 Launchpad">
-  
-   
-    <span class="caption">Sitecore 8 Launchpad</span>
-  
-</div>
+This route means that an item in the root of the content tree can be accessed as /[name of product] as well as /product/[name of product].
 
-
-<p>However in saying that, now you need to come back to the Launchpad whenever you need to switch to a different app. This is an extra page load inbetween switching apps. This is still far from a painful experience but I would definitely prefer to cut this &ldquo;middle&rdquo; page out. I think It is the laziness in me (or my impatience?) that drives me to look for quicker ways to improvise such tedious workflows. And so the hunt began.</p>
-
-<h3 id="the-find">The Find</h3>
-
-<p>I found a chrome extension called <a href="https://chrome.google.com/webstore/detail/sitecore-developer-tool/cmbppbejihcnbngefandoljljdppnlda" target="_blank">Sitecore Developer Tool</a> that gives you nice little shortcuts to most common pages/apps in Sitecore. Exactly what I wanted, this tool works with the sitecore url in the current browser tab and lets you quickly switch between admin pages, apps, databases and modes without having to go to the Launchpad or Desktop mode or type the url. Great!!!</p>
-
-<h3 id="the-bad">The Bad</h3>
-
-<p>This may not be a problem for you if you primarily use Chrome for Sitecore, but lately I have been using Firefox for everything Sitecore. So the biggest drawback for me now is this tool does not have a Firefox counterpart. And I couldn&rsquo;t find any other equivalent. So I had to come up with something.</p>
-
-<h3 id="the-bookmarklets">The Bookmarklets</h3>
-
-<p>The easy solution was to write bookmarklets. To achieve a similar functionality, I created bookmarklets to most of the common sitecore apps that are accessible from the launchpad and also the admin pages and other tools. These bookmarklets are basically normal bookmarks with scripts to calculate the context site url, hence very light-weight and works with most popular browsers.</p>
+If you do not specify a controller in a custom route, the default Sitecore controller handles the request. Similarly, if an action is not specified, the default action ‘Index’ is used.
+</code></pre>
 
 <blockquote>
-<p>A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. Bookmarklets are unobtrusive JavaScripts stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. <a href="https://en.wikipedia.org/wiki/Bookmarklet" target="_blank">Read more here</a></p>
+<p>Read more here: <a href="https://doc.sitecore.net/sitecore_experience_platform/developing/developing_with_sitecore/mvc/use_mvc_routing" target="_blank">Use MVC routing</a></p>
 </blockquote>
 
-<p><strong>The advantages:</strong></p>
+<h3 id="the-reason">The Reason</h3>
 
-<ul>
-<li>simple and light-weight<br /></li>
-<li>works on any sitecore url<br /></li>
-<li>works on most major browsers<br /></li>
-<li>can be synced between different browsers and machines using tools like Xmarks Bookmark Sync<br /></li>
-<li>easily editable and extendable as they are just bookmarks<br />
-<br /></li>
-</ul>
+<p>After some more of digging, I found out that the problem lies within Sitecore&rsquo;s <code>Sitecore.Mvc.Pipelines.Loader.InitializeRoutes</code> pipeline. If you decompile it, under the <code>RegisterRoutes()</code> method you will find something like this:</p>
 
+<pre><code class="language-cs">    protected virtual void RegisterRoutes(RouteCollection routes, PipelineArgs args)
+    {
+      ...
+        this.SetDefaultValues(routes, args);    //this sets the defaults
+        this.SetRouteHandlers(routes, args);
+        this.RegisterAreas();
+        this.RegisterRazorViewEngine();
+      ...
+    }
+</code></pre>
 
+<p>You can see that <code>RegisterAreas()</code> is called only after <code>SetDefaultValues()</code>. And <code>SetDefaultValues()</code> is where the defaults are set and the custom keys are processed:</p>
 
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
+<pre><code class="language-cs">    protected virtual void SetDefaultValues(RouteCollection routes, PipelineArgs args)
+    {
+        ...
+        RouteValueDictionary defaults = (route as Route).ValueOrDefault&lt;Route, RouteValueDictionary&gt;((Func&lt;Route, RouteValueDictionary&gt;) (r =&gt; r.Defaults));
+        if (defaults != null)
+        {
+        this.AddDefaultRouteValue(&quot;action&quot;, (object) MvcSettings.SitecoreActionName, defaults);
+        this.AddDefaultRouteValue(&quot;controller&quot;, (object) MvcSettings.SitecoreControllerName, defaults);
+        this.AddKeyToIgnore(&quot;action&quot;, defaults);
+        this.AddKeyToIgnore(&quot;controller&quot;, defaults);
+        this.AddKeyToIgnore(&quot;scItemPath&quot;, defaults);
+        this.AddKeyToIgnore(&quot;scLanguage&quot;, defaults);
+        this.AddSpecifiedIgnoreKeys(defaults);
+        }
+        ...
+    }
+</code></pre>
 
-<div class="figure center" >
-  
-    <a class="fancybox" href="/images/sitecore-launchpad-bookmarklets-3-chrome.png" title="Sitecore Launchpad Bookmarkets in Chrome" data-fancybox-group="group:bookmarklets">
-  
-    <img class="fig-img" src="/images/sitecore-launchpad-bookmarklets-3-chrome.png"  alt="Sitecore Launchpad Bookmarkets in Chrome">
-  
-    </a>
-  
-   
-    <span class="caption">Sitecore Launchpad Bookmarkets in Chrome</span>
-  
-</div>
+<p>So this is why my custom route which was defined in one of the <em>AreaRegistration</em> class was completely missed.</p>
 
+<h3 id="the-solution">The Solution</h3>
 
+<p>For a quick fix, I created an override of the pipeline and moved the calls around. So <code>RegisterAreas()</code> is called first now:</p>
 
+<pre><code class="language-cs">    public class InitializeRoutes : Sitecore.Mvc.Pipelines.Loader.InitializeRoutes
+    {
+        protected override void RegisterRoutes(RouteCollection routes, PipelineArgs args)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            try
+            {
+                routes.MapRoute(MvcSettings.SitecoreRouteName, &quot;{*pathInfo}&quot;, (object)new
+                {
+                    scIsFallThrough = true
+                }, (object)new
+                {
+                    isContent = new IsContentUrlRestraint()
+                });
+                this.RegisterAreas(); //moved RegisterAreas method before Set methods
+                this.SetDefaultValues(routes, args);
+                this.SetRouteHandlers(routes, args);
+                this.RegisterRazorViewEngine();
+            }
+            finally
+            {
+                stopwatch.Stop();
+            }
+        }
+    }
+</code></pre>
 
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
+<p>And then patched the config:</p>
 
-<div class="figure center" >
-  
-    <a class="fancybox" href="/images/sitecore-launchpad-bookmarklets-4-firefox.png" title="Sitecore Launchpad Bookmarkets in Firefox" data-fancybox-group="group:bookmarklets">
-  
-    <img class="fig-img" src="/images/sitecore-launchpad-bookmarklets-4-firefox.png"  alt="Sitecore Launchpad Bookmarkets in Firefox">
-  
-    </a>
-  
-   
-    <span class="caption">Sitecore Launchpad Bookmarkets in Firefox</span>
-  
-</div>
+<pre><code class="language-xml">  &lt;sitecore&gt;
+    &lt;pipelines&gt;
+      &lt;initialize&gt;
+        &lt;!-- Override 'Sitecore.Mvc.Pipelines.Loader.InitializeRoutes, Sitecore.Mvc' to fix issue with 
+          routes in RegisterAreas missing out Sitecore's Default replacements, like ScItemPath. --&gt;
+        &lt;processor 
+          type=&quot;ScExtensions.Pipelines.Loader.InitializeRoutes, ScExtensions&quot;
+          patch:instead=&quot;processor[@type='Sitecore.Mvc.Pipelines.Loader.InitializeRoutes, Sitecore.Mvc']&quot; /&gt;
+      &lt;/initialize&gt;
+    &lt;/pipelines&gt;
+  &lt;/sitecore&gt;
+</code></pre>
 
+<p>The other workaround would be to move out the custom routes from <em>AreaRegistration</em> classes and to separate pipelines that is initialized before the <code>InitializeRoutes</code> pipeline. But keeping them within the <em>AreaRegistration</em> felt more natural to me for the MVC Areas.</p>
 
-<h3 id="how-to-install">How to Install</h3>
-
-<ol>
-<li><a href="https://gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e/raw/32e848108ecdda3ebb21ffbf8c82d047a3fb7770/Sitecore%2520Launchpad%2520Bookmarklets.html" download="SitecoreLaunchpadBookmarklets.html" target="_blank">Download</a> the bookmarks HTML file from the gist below.<br /></li>
-<li>Import the HTML file into your browser via its bookmark manager.<br />
-<br /></li>
-</ol>
-
-<p>You will see a bookmarks folder called <strong>Sitecore Launchpad</strong> being imported to the browser&rsquo;s default import location. Feel free to move it where you want.</p>
-
-<p><strong>The HTML file to import</strong> [<a href="https://gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e/raw/32e848108ecdda3ebb21ffbf8c82d047a3fb7770/Sitecore%2520Launchpad%2520Bookmarklets.html" download="SitecoreLaunchpadBookmarklets.html" target="_blank">Download</a>]<br />
-<script src="//gist.github.com/sud33p/f6431437247ce937eff2bd4abcad6d6e.js"></script></p>
-
+<p>For a proper fix, I have reported this to Sitecore support. Until then, the workaround should do the job.</p>
               
             </div>
           </div>
@@ -384,7 +383,7 @@ ga('send', 'pageview');
                   
   <a class="tag tag--primary tag--small" href="//tags/sitecore/">Sitecore</a>
 
-  <a class="tag tag--primary tag--small" href="//tags/devtools/">DevTools</a>
+  <a class="tag tag--primary tag--small" href="//tags/error/">Error</a>
 
                 </div>
               
@@ -394,7 +393,7 @@ ga('send', 'pageview');
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/google-home-talks-to-home-assistant/" data-tooltip="Google Home talks to Home Assistant... (Sort of!)">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -402,7 +401,7 @@ ga('send', 'pageview');
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
+          <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/sitecore-site-definition-name-cannot-start-number/" data-tooltip="Sitecore&#39;s site definition name cannot start with a number">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -417,17 +416,17 @@ ga('send', 'pageview');
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -471,7 +470,7 @@ ga('send', 'pageview');
     <ul class="post-actions post-action-nav">
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/google-home-talks-to-home-assistant/" data-tooltip="Google Home talks to Home Assistant... (Sort of!)">
+          <a class="post-action-btn btn btn--disabled">
         
           <i class="fa fa-angle-left"></i>
           <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -479,7 +478,7 @@ ga('send', 'pageview');
       </li>
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/tds-cannot-remove-says-its-in-use/" data-tooltip="TDS cannot remove template and says it&#39;s in use.. but it isn&#39;t!!!">
+          <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/sitecore-site-definition-name-cannot-start-number/" data-tooltip="Sitecore&#39;s site definition name cannot start with a number">
         
           <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
           <i class="fa fa-angle-right"></i>
@@ -494,17 +493,17 @@ ga('send', 'pageview');
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-google-plus"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-facebook-official"></i>
       </a>
     </li>
     <li class="post-action hide-xs">
-      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
@@ -530,17 +529,17 @@ ga('send', 'pageview');
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2f2016%2f12%2fsitecore-launchpad-apps-with-bookmarklets%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2f2017%2f10%2fsitecore-route-keys-in-mvc-areas-does-not-get-processed%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -771,9 +770,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = '\/2016\/12\/sitecore-launchpad-apps-with-bookmarklets\/';
+          this.page.url = '\/2017\/10\/sitecore-route-keys-in-mvc-areas-does-not-get-processed\/';
           
-            this.page.identifier = '\/2016\/12\/sitecore-launchpad-apps-with-bookmarklets\/'
+            this.page.identifier = '\/2017\/10\/sitecore-route-keys-in-mvc-areas-does-not-get-processed\/'
           
         };
         (function() {

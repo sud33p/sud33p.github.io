@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Sudeep&#39;s Blog</title>
-    <link>/tags/development/index.xml</link>
+    <link>/tags/development/</link>
     <description>Recent content in Development on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2016 01:02:07 +1000</lastBuildDate>
+    
+	<atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sitecore and Symlinks (Symbolic Links)</title>
@@ -14,147 +17,7 @@
       <pubDate>Sat, 03 Sep 2016 01:02:07 +1000</pubDate>
       
       <guid>/2016/09/sitecore-and-symlinks-symbolic-links/</guid>
-      <description>
-
-&lt;p&gt;You must be wondering, what&amp;rsquo;s the relation here? There isn&amp;rsquo;t really, yet there could very well be one, if you want&amp;hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&amp;rsquo;t think there are more than 100 ways). That&amp;rsquo;s still a lot.&lt;/p&gt;
-
-&lt;p&gt;Ok, back to the topic. Recently, one of the projects that I worked on had a slightly different approach of structuring projects/folders in the solution, mainly the Website publish folder where the web project publishes into. One of the very popular ways to arrange your sitecore project is to keep your sitecore website files separate from the codebase. This approach has a lot of benefits as opposed to developing directly on top of your IIS website folder. If you are not familiar with this development technique, I suggest you read Sean Kearney&amp;rsquo;s post &lt;a href=&#34;http://seankearney.com/post/Visual-Studio-Projects-and-Sitecore&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Even though this project followed the technique of separating the sitecore website files from the code project, the sitecore website folder was still kept inside the solution folder, the source controlled area. Gitignores were used to prevent the folder content from getting tracked. This meant that the placement of the other two folders that are part of the sitecore installation (Data and Databases), were left to the dev&amp;rsquo;s discretion. Below is an example of such a structure.&lt;/p&gt;
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-&lt;div class=&#34;figure &#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-1.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-1.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Sitecore install folder on left, Repo on the right&lt;/span&gt;
-  
-&lt;/div&gt;
-
-
-&lt;p&gt;The sitecore install folder is on the left, which normally contains of &amp;lsquo;Data, Databases and Website&amp;rsquo; folders. The &amp;lsquo;Website&amp;rsquo; folder has been moved to the right here. This isn&amp;rsquo;t so bad per se, sitting at a relative location to the solution is a benefit. But if you are working on multiple projects or someone new joins the team, this can get confusing. I was not a big fan. Can we for once get best of both worlds?&lt;/p&gt;
-
-&lt;h3 id=&#34;symlinks-to-the-rescue&#34;&gt;Symlinks to the rescue&lt;/h3&gt;
-
-&lt;p&gt;Using Symlinks you can create a junction link on the sitecore install folder, pointing to the &amp;lsquo;Website&amp;rsquo; folder on the Repo. And it will make it look like the &amp;lsquo;Website&amp;rsquo; folder exists within the install folder with all its contents, even though it is just a reference to the actual &amp;lsquo;Website&amp;rsquo; folder within the repo. Think of it as an advanced shortcut, similar to the Windows shortcut link (.lnk) but with greater power.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What are Symlinks anyway?&lt;br /&gt;
-Symlinks or Symbolic links, are basically advanced shortcuts. You can create symbolic links to individual files or folders, and then these will appear like they are stored in the folder with the symbolic link even though the symbolic link only points to their real location. &lt;a href=&#34;http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/&#34; target=&#34;_blank&#34;&gt;Read more here&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;the-command&#34;&gt;The command&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;br /&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;br /&gt;
-    &lt;strong&gt;MKLINK [[/D] | [/H] | [/J]] Link Target&lt;/strong&gt;&lt;br /&gt;
-        /D          Creates a directory symbolic link.  Default is a file symbolic link.&lt;br /&gt;
-        /H          Creates a hard link instead of a symbolic link.&lt;br /&gt;
-        /J          Creates a Directory Junction.&lt;br /&gt;
-        Link        Specifies the new symbolic link name.&lt;br /&gt;
-        Target      Specifies the path (relative or absolute) that the new link refers to.&lt;br /&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;For our purpose, we need to create a directory junction &lt;code&gt;(/J)&lt;/code&gt; to link to the Website folder. So lets go ahead and do that:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Open command prompt (in Admin mode)&lt;br /&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Enter the command &lt;code&gt;mklink /J Link Target&lt;/code&gt;. In our case:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;D:\Dev\Sites\ClientA&amp;gt;mklink /J Website D:\Dev\Repos\ClientA\src\Website
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If successful, we will see the following output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-default&#34;&gt;Junction created for Website &amp;lt;&amp;lt;===&amp;gt;&amp;gt; D:\Dev\Repos\ClientA\src\Website
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&#34;alert info no-icon &#34;&gt;
-  &lt;p&gt;
-`MKLINK` is a built-in command line symlink tool in Windows Vista and above. If you are more of a GUI person, &lt;a href=&#34;http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html&#34; target=&#34;_blank&#34;&gt;Link Shell Extension&lt;/a&gt; is an excellent free tool for you. It also supports Windows XP.
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;result&#34;&gt;Result&lt;/h3&gt;
-
-&lt;p&gt;We should now have a symlink named &amp;lsquo;Website&amp;rsquo; created in the sitecore install folder which appears as a folder but is really pointing to the &amp;lsquo;Website&amp;rsquo; folder in the repo. You can identify by the little shortcut icon on it.&lt;/p&gt;
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-&lt;div class=&#34;figure &#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-2.png&#34; title=&#34;Directory junction created&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-2.png&#34;  alt=&#34;Directory junction created&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Directory junction created&lt;/span&gt;
-  
-&lt;/div&gt;
-
-
-&lt;p&gt;Go ahead and open it. You should see all of the same website content listed underneath.&lt;/p&gt;
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-&lt;div class=&#34;figure &#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;/images/sitecore-symlinks-diagram-3.png&#34; title=&#34;Sitecore install folder on left, Repo on the right&#34; data-fancybox-group=&#34;group:symlinks&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;/images/sitecore-symlinks-diagram-3.png&#34;  alt=&#34;Sitecore install folder on left, Repo on the right&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Sitecore install folder on left, Repo on the right&lt;/span&gt;
-  
-&lt;/div&gt;
-
-
-&lt;p&gt;As a quick test, create a test file underneath either of the folder. You will see it appear immediately under the other.&lt;/p&gt;
-
-&lt;p&gt;All done. Now you can use this symlink reference as a real &amp;lsquo;Website&amp;rsquo; folder for anything you want, be it for IIS site path, TDS project or grunt/gulp tasks.&lt;/p&gt;
-
-&lt;div class=&#34;alert warning no-icon &#34;&gt;
-  &lt;p&gt;
-One thing to remember is, even though these symlinks are a reference to the original item, they do not inherit permissions. So if you are going to use it for say, an IIS site, make sure to set appropriate permissions on the symlink as well.
-&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>You must be wondering, what&amp;rsquo;s the relation here? There isn&amp;rsquo;t really, yet there could very well be one, if you want&amp;hellip; You are probably aware that there are lots of ways to structure a sitecore (VS) solution. I swear if I get a dollar for every time I see a new way of structuring sitecore projects, I would be 100 dollars richer (yea, I don&amp;rsquo;t think there are more than 100 ways).</description>
     </item>
     
   </channel>

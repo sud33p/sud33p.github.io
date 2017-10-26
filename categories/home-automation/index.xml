@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home Automation on Sudeep&#39;s Blog</title>
-    <link>/categories/home-automation/index.xml</link>
+    <link>/categories/home-automation/</link>
     <description>Recent content in Home Automation on Sudeep&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/home-automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2017 20:20:00 +1000</lastBuildDate>
+    
+	<atom:link href="/categories/home-automation/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Google Home talks to Home Assistant... (Sort of!)</title>
@@ -14,160 +17,11 @@
       <pubDate>Wed, 15 Mar 2017 20:20:00 +1000</pubDate>
       
       <guid>/2017/03/google-home-talks-to-home-assistant/</guid>
-      <description>
-
-
-
-
-&lt;div class=&#34;figure center&#34; &gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;/images/home-assistant-google-home-1.png&#34; &gt;
-  
-  
-&lt;/div&gt;
-
-
-&lt;blockquote&gt;
-&lt;p&gt;Hey Google&amp;hellip; turn on the kitchen light!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I had been waiting to get my hands on &lt;a href=&#34;https://madeby.google.com/home/&#34; target=&#34;_blank&#34;&gt;Google Home&lt;/a&gt; since it was first announced, and was trying to find all the valid reasons not to jump on the Amazon Echo bandwagon yet.&lt;/p&gt;
-
-&lt;h5 id=&#34;my-reasons&#34;&gt;My reasons&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;It&amp;rsquo;s not Google&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;From what I&amp;rsquo;ve read and seen in the reviews, Alexa is not as sophisticated as Google Assistant&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Most of Amazon&amp;rsquo;s services are not available in Australia yet&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;And lastly, it&amp;rsquo;s NOT Google&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And then they released it only in the US. All dreams crushed!!! But hey, Echo is not available in Australia either. And it may take even longer to get released here. So I should wait? Nah, I am getting it from the USofA. And finally after a while, thanks to my sister-in-law who lives there, I&amp;rsquo;ve got one to play with now. The fiddling begins&amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;linking-it-to-home-assistant&#34;&gt;Linking it to Home Assistant&lt;/h3&gt;
-
-&lt;p&gt;First thing I wanted to try was to hook it up into my home automation setup. &lt;a href=&#34;https://home-assistant.io/&#34; target=&#34;_blank&#34;&gt;Home Assistant&lt;/a&gt; is currently my central piece of software that drives all my IoT devices in the setup. But as of yet Google Home could only control a handful of devices like SmartThings, Nest, Philips Hue, etc. Home Assistant was not one of them. Luckily, the smart guys and contributors at Home Assistant had this figured out. There is a &amp;lsquo;Emulated Hue Bridge&amp;rsquo; component that basically provides a virtual Philips Hue bridge that Google Home could talk to. What this means is, this component fakes devices and controls in Home Assistant into a JSON feed that Google Home can consume and control via Hue API. Google Home sees all of them as hue lights that it can turn on and off or change the brightness of.&lt;/p&gt;
-
-&lt;h4 id=&#34;the-feed&#34;&gt;The feed:&lt;/h4&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;13&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;modelid&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;HASS123&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Driveway Light&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;state&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;bri&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;reachable&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;},&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;swversion&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;123&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Dimmable light&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;uniqueid&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;switch.outdoorlight_switch_6_0_2&amp;quot;&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;},&lt;/span&gt;
-  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;14&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;modelid&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;HASS123&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Room Heater&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;state&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;bri&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;reachable&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;true&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;},&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;swversion&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;123&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Dimmable light&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color: #f92672&#34;&gt;&amp;quot;uniqueid&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;switch.wemo_switch&amp;quot;&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
-  &lt;span style=&#34;color: #960050; background-color: #1e0010&#34;&gt;...&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id=&#34;the-configuration&#34;&gt;The Configuration&lt;/h3&gt;
-
-&lt;p&gt;To enable and configure Emulated Hue Bridge for Google Home, this is the minimum configuration that you will need to add to your &lt;em&gt;configuration.yaml&lt;/em&gt; file. Make sure that &lt;code&gt;listen_port&lt;/code&gt; is set to &lt;strong&gt;80&lt;/strong&gt; as Google Home does not work with other ports.&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;emulated_hue&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;google_home&lt;/span&gt;  
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;listen_port&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;80&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The following is my configuration where I have limited the control to certain domains. The &lt;code&gt;exposed_domains&lt;/code&gt; variable allows you to specify what domain entities are visible for Google Home to control. For majority of you and your configuration, you would want to limit the domains entities. You wouldn&amp;rsquo;t want everything to be controlled as lights, as that&amp;rsquo;s how Google Home sees them.&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;emulated_hue&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;google_home&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;host_ip&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;192.168.1.8&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;listen_port&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;80&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;expose_by_default&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;true&lt;/span&gt;
-  &lt;span style=&#34;color: #ae81ff&#34;&gt;exposed_domains&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;light&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;switch&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;input_boolean&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;media_player&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class=&#34;alert info no-icon &#34;&gt;
-  &lt;p&gt;
-Check out the full configuration guide on &lt;a href=&#34;https://home-assistant.io/components/emulated_hue/&#34; target=&#34;_blank&#34;&gt;Emulated Hue Bridge&lt;/a&gt; to learn more on the variables and the possibilities. If you are new to Home Assistant, &lt;a href=&#34;https://home-assistant.io/getting-started/&#34; target=&#34;_blank&#34;&gt;start here&lt;/a&gt; first.
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Once the configuration is loaded, you can verify that it is working correctly (and the world hasn&amp;rsquo;t fallen apart) by hitting these two urls:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-default&#34;&gt;http://&amp;lt;HA IP Address&amp;gt;/description.xml - returns descriptor file in XML format
-http://&amp;lt;HA IP Address&amp;gt;/api/pi/lights - returns the above feed, list of entities in JSON 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;the-link&#34;&gt;The Link&lt;/h3&gt;
-
-&lt;p&gt;Now go to the Google Home app in your phone and &lt;code&gt;Home Control &amp;gt; Devices &amp;gt; Add devices&lt;/code&gt; to add this as Philips Hue. It should pull through the devices in the feed. To make it easier to control them, assign them to rooms.&lt;/p&gt;
-
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-&lt;div class=&#34;figure center&#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;/images/home-assistant-google-home-2-android-app.png&#34; title=&#34;Android Google Home app&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;/images/home-assistant-google-home-2-android-app.png&#34; style=&#34;width: 50%;&#34; alt=&#34;Android Google Home app&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Android Google Home app&lt;/span&gt;
-  
-&lt;/div&gt;
-
-
-&lt;h3 id=&#34;enjoy-the-luxury&#34;&gt;Enjoy the luxury&lt;/h3&gt;
-
-&lt;p&gt;Now command your assistant like a king!&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/-0WEDW5kxeg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;And once in a while, make sure to get up and exercise those thumbs and fingers.&lt;/p&gt;
-
-&lt;div class=&#34;alert warning &#34;&gt;
-  &lt;p&gt;
-&lt;em&gt;Hey, Google... turn on all lights&lt;/em&gt; may not be a desirable command here as everything is a light to Google Home. It will turn on your media server, or open your garage door if you have one, which will be annoying. The workaround is to assign your lights to &#34;Rooms&#34; in Google Home app and invoke the commands by room. &lt;em&gt;Hey, Google... turn on all lights in the living room&lt;/em&gt;. You can also create a room called &#34;House&#34;, assign all lights to it and say  &lt;em&gt;Hey, Google... turn on all lights in the house&lt;/em&gt;.
-&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Hey Google&amp;hellip; turn on the kitchen light!
+ I had been waiting to get my hands on Google Home since it was first announced, and was trying to find all the valid reasons not to jump on the Amazon Echo bandwagon yet.
+My reasons  It&amp;rsquo;s not Google
+ From what I&amp;rsquo;ve read and seen in the reviews, Alexa is not as sophisticated as Google Assistant
+ Most of Amazon&amp;rsquo;s services are not available in Australia yet</description>
     </item>
     
   </channel>
